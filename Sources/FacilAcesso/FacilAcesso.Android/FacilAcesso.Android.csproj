@@ -58,6 +58,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Renderers\VAbsoluteLayoutRenderer.cs" />
+    <Compile Include="Renderers\VButtonRenderer.cs" />
+    <Compile Include="Renderers\VDatePickerRenderer.cs" />
+    <Compile Include="Renderers\VEntryRenderer.cs" />
+    <Compile Include="Renderers\VImageCircleRenderer.cs" />
+    <Compile Include="Renderers\VImageRenderer.cs" />
+    <Compile Include="Renderers\VPickerRenderer.cs" />
+    <Compile Include="Renderers\VSmallPickerRenderer.cs" />
+    <Compile Include="Renderers\VTimePickerRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

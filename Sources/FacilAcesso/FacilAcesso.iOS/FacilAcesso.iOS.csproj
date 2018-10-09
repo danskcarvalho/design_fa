@@ -92,6 +92,13 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\VButtonRenderer.cs" />
+    <Compile Include="Renderers\VDatePickerRenderer.cs" />
+    <Compile Include="Renderers\VEntryRenderer.cs" />
+    <Compile Include="Renderers\VImageCircleRenderer.cs" />
+    <Compile Include="Renderers\VPickerRenderer.cs" />
+    <Compile Include="Renderers\VSmallPickerRenderer.cs" />
+    <Compile Include="Renderers\VTimePickerRenderer.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />

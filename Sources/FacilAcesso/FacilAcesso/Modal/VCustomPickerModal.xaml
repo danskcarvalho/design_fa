@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:VContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso" 
+             x:Class="FacilAcesso.VCustomPickerModal">
+    <StackLayout Padding="0,8">
+        <local:ItemRepeater x:Name="itemRepeater">
+            <local:ItemRepeater.DefaultTemplate>
+                <DataTemplate>
+                    <StackLayout HorizontalOptions="FillAndExpand" Padding="35,5" local:EventBehavior.Tapped="{Binding TappedCommand}">
+                        <Label Text="{Binding Nome}" HorizontalOptions="FillAndExpand" TextColor="{Binding Color}" FontSize="14" HorizontalTextAlignment="Center"></Label>
+                    </StackLayout>
+                </DataTemplate>
+            </local:ItemRepeater.DefaultTemplate>
+            <local:ItemRepeater.SeparatorTemplate>
+                <DataTemplate>
+                    <StackLayout BackgroundColor="#D1E6FC" HeightRequest="1"></StackLayout>
+                </DataTemplate>
+            </local:ItemRepeater.SeparatorTemplate>
+        </local:ItemRepeater>
+    </StackLayout>
+</local:VContentView>

@@ -1,8 +1,274 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
              x:Class="FacilAcesso.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="ActivityIndicator">
+                <Setter Property="Color" Value="#1072bc" />
+            </Style>
+            <Style TargetType="StackLayout" x:Key="Header">
+                <Setter Property="BackgroundColor" Value="#1072bc" />
+            </Style>
+            <Style TargetType="Label" x:Key="HeaderText">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="TextColor" Value="#FFFFFF" />
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+            <local:NegateBooleanConverter x:Key="InverseBoolConverter"/>
+            <ControlTemplate x:Key="ModalPage">
+                <AbsoluteLayout>
+                    <StackLayout BackgroundColor="#C1E3F4" AbsoluteLayout.LayoutBounds="0,0,1,1"  AbsoluteLayout.LayoutFlags="All"></StackLayout>
+                    <Grid AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" RowSpacing="0" ColumnSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition>
+                                <RowDefinition.Height>
+                                    <OnPlatform x:TypeArguments="GridLength" iOS="74" Android="54" />
+                                </RowDefinition.Height>
+                            </RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
+                        <StackLayout Style="{StaticResource Header}" Orientation="Horizontal" Spacing="0" Grid.Row="0" Grid.Column="0">
+                            <StackLayout.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="74" Android="54" />
+                            </StackLayout.HeightRequest>
+                            <StackLayout.Padding>
+                                <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" Android="0" />
+                            </StackLayout.Padding>
+                            <local:VButton Command="{TemplateBinding GoBackCommand}" Image="Back.png" VerticalOptions="Center" HorizontalOptions="Start" BackgroundColor="Transparent" BorderWidth="0" WidthRequest="50"></local:VButton>
+                            <Label HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Style="{StaticResource HeaderText}" Text="{TemplateBinding Title}" LineBreakMode="TailTruncation" Margin="6, 0, 0, 0"></Label>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="1" Grid.Column="0">
+                            <ActivityIndicator IsVisible="{TemplateBinding IsLoading}" IsRunning="True" Margin="0, 15, 0, 0" HorizontalOptions="Center"></ActivityIndicator>
+                        </StackLayout>
+
+                        <ScrollView IsVisible="{TemplateBinding IsLoading, Converter={StaticResource InverseBoolConverter}}" Padding="0" Margin="0" Grid.Row="1" Grid.Column="0">
+                            <ContentPresenter />
+                        </ScrollView>
+                    </Grid>
+                    <ContentView local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" IsVisible="{TemplateBinding IsPopupVisible}" BackgroundColor="#7F000000" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                        <Frame CornerRadius="15" HorizontalOptions="Center" VerticalOptions="Center" Margin="30, 30, 30, 30" Padding="0">
+                            <local:VScrollView VContent="{TemplateBinding PopupContent}"></local:VScrollView>
+                        </Frame>
+                    </ContentView>
+                </AbsoluteLayout>
+            </ControlTemplate>
+            <ControlTemplate x:Key="ModalNoScrollingPage">
+                <AbsoluteLayout>
+                    <StackLayout BackgroundColor="#C1E3F4" AbsoluteLayout.LayoutBounds="0,0,1,1"  AbsoluteLayout.LayoutFlags="All"></StackLayout>
+                    <Grid AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" RowSpacing="0" ColumnSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition>
+                                <RowDefinition.Height>
+                                    <OnPlatform x:TypeArguments="GridLength" iOS="74" Android="54" />
+                                </RowDefinition.Height>
+                            </RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Style="{StaticResource Header}" Orientation="Horizontal" Spacing="0" Grid.Row="0" Grid.Column="0">
+                            <StackLayout.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="74" Android="54" />
+                            </StackLayout.HeightRequest>
+                            <StackLayout.Padding>
+                                <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" Android="0" />
+                            </StackLayout.Padding>
+                            <local:VButton Command="{TemplateBinding GoBackCommand}" Image="Back.png" VerticalOptions="Center" HorizontalOptions="Start" BackgroundColor="Transparent" BorderWidth="0" WidthRequest="50"></local:VButton>
+                            <Label HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Style="{StaticResource HeaderText}" Text="{TemplateBinding Title}" LineBreakMode="TailTruncation" Margin="6, 0, 0, 0"></Label>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="1" Grid.Column="0">
+                            <ActivityIndicator IsVisible="{TemplateBinding IsLoading}" IsRunning="True" Margin="0, 15, 0, 0" HorizontalOptions="Center"></ActivityIndicator>
+                        </StackLayout>
+
+                        <ContentPresenter IsVisible="{TemplateBinding IsLoading, Converter={StaticResource InverseBoolConverter}}" Padding="0" Margin="0" Grid.Row="1" Grid.Column="0" />
+                    </Grid>
+                    <ContentView local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" IsVisible="{TemplateBinding IsPopupVisible}" BackgroundColor="#7F000000" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                        <Frame CornerRadius="15" HorizontalOptions="Center" VerticalOptions="Center" Margin="30, 30, 30, 30" Padding="0">
+                            <local:VScrollView VContent="{TemplateBinding PopupContent}"></local:VScrollView>
+                        </Frame>
+                    </ContentView>
+                </AbsoluteLayout>
+            </ControlTemplate>
+            <ControlTemplate x:Key="ModalNoBackgroundPage">
+                <AbsoluteLayout BackgroundColor="White">
+                    <Grid AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" RowSpacing="0" ColumnSpacing="0" BackgroundColor="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition>
+                                <RowDefinition.Height>
+                                    <OnPlatform x:TypeArguments="GridLength" iOS="74" Android="54" />
+                                </RowDefinition.Height>
+                            </RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Style="{StaticResource Header}" Orientation="Horizontal" Spacing="0" Grid.Row="0" Grid.Column="0">
+                            <StackLayout.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="74" Android="54" />
+                            </StackLayout.HeightRequest>
+                            <StackLayout.Padding>
+                                <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" Android="0" />
+                            </StackLayout.Padding>
+                            <local:VButton Command="{TemplateBinding GoBackCommand}" Image="Back.png" VerticalOptions="Center" HorizontalOptions="Start" BackgroundColor="Transparent" BorderWidth="0" WidthRequest="50"></local:VButton>
+                            <Label HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Style="{StaticResource HeaderText}" Text="{TemplateBinding Title}" LineBreakMode="TailTruncation" Margin="6, 0, 0, 0"></Label>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="1" Grid.Column="0">
+                            <ActivityIndicator IsVisible="{TemplateBinding IsLoading}" IsRunning="True" Margin="0, 15, 0, 0" HorizontalOptions="Center"></ActivityIndicator>
+                        </StackLayout>
+
+                        <ScrollView IsVisible="{TemplateBinding IsLoading, Converter={StaticResource InverseBoolConverter}}" Padding="0" Margin="0" Grid.Row="1" Grid.Column="0">
+                            <ContentPresenter />
+                        </ScrollView>
+                    </Grid>
+                    <ContentView local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" IsVisible="{TemplateBinding IsPopupVisible}" BackgroundColor="#7F000000" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                        <Frame CornerRadius="15" HorizontalOptions="Center" VerticalOptions="Center" Margin="30, 30, 30, 30" Padding="0">
+                            <local:VScrollView VContent="{TemplateBinding PopupContent}"></local:VScrollView>
+                        </Frame>
+                    </ContentView>
+                </AbsoluteLayout>
+            </ControlTemplate>
+            <ControlTemplate x:Key="ModalNoScrollingNoBackgroundPageClickableModal">
+                <AbsoluteLayout BackgroundColor="White">
+                    <Grid AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" RowSpacing="0" ColumnSpacing="0" BackgroundColor="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition>
+                                <RowDefinition.Height>
+                                    <OnPlatform x:TypeArguments="GridLength" iOS="74" Android="54" />
+                                </RowDefinition.Height>
+                            </RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Style="{StaticResource Header}" Orientation="Horizontal" Spacing="0" Grid.Row="0" Grid.Column="0">
+                            <StackLayout.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="74" Android="54" />
+                            </StackLayout.HeightRequest>
+                            <StackLayout.Padding>
+                                <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" Android="0" />
+                            </StackLayout.Padding>
+                            <local:VButton Command="{TemplateBinding GoBackCommand}" Image="Back.png" VerticalOptions="Center" HorizontalOptions="Start" BackgroundColor="Transparent" BorderWidth="0" WidthRequest="50"></local:VButton>
+                            <Label HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Style="{StaticResource HeaderText}" Text="{TemplateBinding Title}" LineBreakMode="TailTruncation" Margin="6, 0, 0, 0"></Label>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="1" Grid.Column="0">
+                            <ActivityIndicator IsVisible="{TemplateBinding IsLoading}" IsRunning="True" Margin="0, 15, 0, 0" HorizontalOptions="Center"></ActivityIndicator>
+                        </StackLayout>
+
+                        <StackLayout IsVisible="{TemplateBinding IsLoading, Converter={StaticResource InverseBoolConverter}}" Padding="0" Margin="0" Grid.Row="1" Grid.Column="0">
+                            <ContentPresenter HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                        </StackLayout>
+                    </Grid>
+                    <ContentView IsVisible="{TemplateBinding IsPopupVisible}" BackgroundColor="#7F000000" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                        <Grid RowSpacing="0" ColumnSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="30"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Frame CornerRadius="15" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" Grid.Row="2" Grid.Column="2">
+                                <local:VScrollView VContent="{TemplateBinding PopupContent}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></local:VScrollView>
+                            </Frame>
+
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="1"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="2"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="3"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="4"></StackLayout>
+
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="1"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="2"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="3"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="4"></StackLayout>
+
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="0"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="1"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="3"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="4"></StackLayout>
+
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="0"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="1"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="2"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="3"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="4"></StackLayout>
+
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="4" Grid.Column="0"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="4" Grid.Column="1"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="4" Grid.Column="2"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="4" Grid.Column="3"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="4" Grid.Column="4"></StackLayout>
+                        </Grid>
+                    </ContentView>
+                </AbsoluteLayout>
+            </ControlTemplate>
+            <ControlTemplate x:Key="ModalNoScrollingNoBackgroundPage">
+                <AbsoluteLayout BackgroundColor="White">
+                    <Grid AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" RowSpacing="0" ColumnSpacing="0" BackgroundColor="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition>
+                                <RowDefinition.Height>
+                                    <OnPlatform x:TypeArguments="GridLength" iOS="74" Android="54" />
+                                </RowDefinition.Height>
+                            </RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Style="{StaticResource Header}" Orientation="Horizontal" Spacing="0" Grid.Row="0" Grid.Column="0">
+                            <StackLayout.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="74" Android="54" />
+                            </StackLayout.HeightRequest>
+                            <StackLayout.Padding>
+                                <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" Android="0" />
+                            </StackLayout.Padding>
+                            <local:VButton Command="{TemplateBinding GoBackCommand}" Image="Back.png" VerticalOptions="Center" HorizontalOptions="Start" BackgroundColor="Transparent" BorderWidth="0" WidthRequest="50"></local:VButton>
+                            <Label HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Style="{StaticResource HeaderText}" Text="{TemplateBinding Title}" LineBreakMode="TailTruncation" Margin="6, 0, 0, 0"></Label>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="1" Grid.Column="0">
+                            <ActivityIndicator IsVisible="{TemplateBinding IsLoading}" IsRunning="True" Margin="0, 15, 0, 0" HorizontalOptions="Center"></ActivityIndicator>
+                        </StackLayout>
+
+                        <StackLayout IsVisible="{TemplateBinding IsLoading, Converter={StaticResource InverseBoolConverter}}" Padding="0" Margin="0" Grid.Row="1" Grid.Column="0">
+                            <ContentPresenter HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                        </StackLayout>
+                    </Grid>
+                    <ContentView local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" IsVisible="{TemplateBinding IsPopupVisible}" BackgroundColor="#7F000000" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                        <Frame CornerRadius="15" HorizontalOptions="Center" VerticalOptions="Center" Margin="30, 30, 30, 30" Padding="0">
+                            <local:VScrollView VContent="{TemplateBinding PopupContent}"></local:VScrollView>
+                        </Frame>
+                    </ContentView>
+                </AbsoluteLayout>
+            </ControlTemplate>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
