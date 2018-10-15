@@ -27,6 +27,10 @@ namespace FacilAcesso
             {
                 HideModal();
             });
+            GoBackCommand = new Command(async () =>
+            {
+                await this.Navigation.PopAsync();
+            });
         }
 
         public bool IsLoading

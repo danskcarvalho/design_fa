@@ -6,6 +6,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -32,12 +33,13 @@ namespace FacilAcesso.Droid
             if (Control != null)
             {
                 //Control.SetBackgroundResource(Resource.Drawable.VEntryBackground);
-                Control.SetPadding(30, 35, 30, 35);
-                Control.TextSize = 14;
+                //Control.SetPadding(30, 35, 30, 35);
+                //Control.TextSize = 14;
                 Control.InputType = Android.Text.InputTypes.TextFlagNoSuggestions;
+                Control.Background = new ColorDrawable(Android.Graphics.Color.Transparent);
 
-                var thickness = (view as VPicker)?.Padding ?? new Thickness(30, 35, 30, 35);
-                Control.SetPadding((int)thickness.Left, (int)thickness.Top, (int)thickness.Right, (int)thickness.Bottom);
+                //var thickness = (view as VPicker)?.Padding ?? new Thickness(30, 35, 30, 35);
+                //Control.SetPadding((int)thickness.Left, (int)thickness.Top, (int)thickness.Right, (int)thickness.Bottom);
             }
         }
     }

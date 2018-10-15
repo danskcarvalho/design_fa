@@ -22,8 +22,8 @@ namespace FacilAcesso
             typeof(VCustomPicker), null, propertyChanged: OnItemsSourceChanged);
         public static BindableProperty SelectedItemProperty = BindableProperty.Create("SelectedItem", typeof(object),
             typeof(VCustomPicker), null, defaultBindingMode: BindingMode.TwoWay, propertyChanged: OnSelectedItemChanged);
-        public static BindableProperty TextPaddingProperty = BindableProperty.Create("TextPadding", typeof(Thickness),
-            typeof(VCustomPicker), new Thickness(0, 0), propertyChanged: OnTextPaddingChanged);
+        //public static BindableProperty TextPaddingProperty = BindableProperty.Create("TextPadding", typeof(Thickness),
+        //    typeof(VCustomPicker), new Thickness(0, 0), propertyChanged: OnTextPaddingChanged);
         public static BindableProperty PlaceholderProperty = BindableProperty.Create("Placeholder", typeof(string),
             typeof(VCustomPicker), null, propertyChanged: OnPlaceholderChanged);
 
@@ -42,11 +42,11 @@ namespace FacilAcesso
             get => GetValue(SelectedItemProperty);
             set => SetValue(SelectedItemProperty, value);
         }
-        public Thickness TextPadding
-        {
-            get => (Thickness)GetValue(TextPaddingProperty);
-            set => SetValue(TextPaddingProperty, value);
-        }
+        //public Thickness TextPadding
+        //{
+        //    get => (Thickness)GetValue(TextPaddingProperty);
+        //    set => SetValue(TextPaddingProperty, value);
+        //}
         public string Placeholder
         {
             get => (string)GetValue(PlaceholderProperty);
@@ -157,11 +157,11 @@ namespace FacilAcesso
             var customPicker = bindable as VCustomPicker;
             customPicker._Entry.Placeholder = (string)newValue;
         }
-        private static void OnTextPaddingChanged(BindableObject bindable, object oldValue, object newValue)
-        {
-            var customPicker = bindable as VCustomPicker;
-            customPicker._Entry.Padding = (Thickness)newValue;
-        }
+        //private static void OnTextPaddingChanged(BindableObject bindable, object oldValue, object newValue)
+        //{
+        //    var customPicker = bindable as VCustomPicker;
+        //    customPicker._Entry.Padding = (Thickness)newValue;
+        //}
         private static void OnSelectedItemChanged(BindableObject bindable, object oldValue, object newValue)
         {
             var customPicker = bindable as VCustomPicker;

@@ -13,6 +13,7 @@ using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
 using FacilAcesso;
 using System.ComponentModel;
+using Android.Graphics.Drawables;
 
 [assembly: ExportRenderer(typeof(VDatePicker), typeof(FacilAcesso.Droid.VDatePickerRenderer))]
 namespace FacilAcesso.Droid
@@ -36,11 +37,12 @@ namespace FacilAcesso.Droid
                 SetPlaceholderTextColor(view);
 
                 //Control.SetBackgroundResource(Resource.Drawable.VEntryBackground);
-                Control.SetPadding(30, 35, 30, 35);
-                Control.TextSize = 14;
+                Control.Background = new ColorDrawable(Android.Graphics.Color.Transparent);
+                //Control.SetPadding(30, 35, 30, 35);
+                //Control.TextSize = 14;
 
-                var thickness = (view as VDatePicker)?.Padding ?? new Thickness(30, 35, 30, 35);
-                Control.SetPadding((int)thickness.Left, (int)thickness.Top, (int)thickness.Right, (int)thickness.Bottom);
+                //var thickness = (view as VDatePicker)?.Padding ?? new Thickness(30, 35, 30, 35);
+                //Control.SetPadding((int)thickness.Left, (int)thickness.Top, (int)thickness.Right, (int)thickness.Bottom);
             }
         }
 

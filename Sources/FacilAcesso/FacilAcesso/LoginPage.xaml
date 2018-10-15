@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.LoginPage"
+             NavigationPage.HasNavigationBar="False"
+             Title="Login">
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Image Aspect="AspectFill" Source="bg_parking.png" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"></Image>
+        <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="40" Spacing="5">
+                <Image Margin="0,100,0,0" Source="logo_home.png" Aspect="AspectFit" HorizontalOptions="FillAndExpand"></Image>
+                <Frame Style="{StaticResource FrameComponentes}" Margin="0,40,0,0">
+                    <StackLayout Style="{StaticResource LayoutComponentes}">
+                        <StackLayout Style="{StaticResource EntryContainer}">
+                            <Image Source="ic_tag.png" Style="{StaticResource EntryImage}"></Image>
+                            <local:VEntry Placeholder="CPF" Style="{StaticResource Entry}"></local:VEntry>
+                        </StackLayout>
+                        <StackLayout Style="{StaticResource Separator}"></StackLayout>
+                        <StackLayout Style="{StaticResource EntryContainer}">
+                            <Image Source="ic_tag.png" Style="{StaticResource EntryImage}"></Image>
+                            <local:VEntry Placeholder="Senha" Style="{StaticResource Entry}"></local:VEntry>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Label Text="Esqueceu a senha?" Style="{StaticResource LinkSmall}" HorizontalOptions="End"></Label>
+                <Button Style="{StaticResource BotaoAzul}" Text="ENTRAR" Margin="0,30,0,0"></Button>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10" Margin="0,20,0,0">
+                    <Label Text="Não tem cadastro?" Style="{StaticResource TextoPequeno}"></Label>
+                    <Label Text="Cadastre-se" Style="{StaticResource LinkSmall}"></Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </AbsoluteLayout>
+</ContentPage>

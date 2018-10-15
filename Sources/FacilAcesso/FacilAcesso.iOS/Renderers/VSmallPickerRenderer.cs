@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using FacilAcesso;
+using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
@@ -17,10 +18,12 @@ namespace FacilAcesso.iOS
 
             if (Control != null)
             {
-                Control.BackgroundColor = Color.Transparent.ToUIColor();
-                Control.Layer.BorderWidth = 0;
-                Control.BorderStyle = UIKit.UITextBorderStyle.None;
-                Control.Font = UIKit.UIFont.FromName(Control.Font.Name, ((nfloat)((Element as VSmallPicker)?.FontSize ?? 12.0)));
+                Control.BackgroundColor = UIColor.FromRGBA(0, 0, 0, 0);
+                Control.BorderStyle = UITextBorderStyle.None;
+                //Control.BackgroundColor = Color.Transparent.ToUIColor();
+                //Control.Layer.BorderWidth = 0;
+                //Control.BorderStyle = UIKit.UITextBorderStyle.None;
+                //Control.Font = UIKit.UIFont.FromName(Control.Font.Name, ((nfloat)((Element as VSmallPicker)?.FontSize ?? 12.0)));
             }
         }
 

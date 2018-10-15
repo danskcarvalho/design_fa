@@ -13,6 +13,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using FacilAcesso;
 using System.ComponentModel;
+using Android.Graphics.Drawables;
 
 [assembly: ExportRenderer(typeof(VSmallPicker), typeof(FacilAcesso.Droid.VSmallPickerRenderer))]
 namespace FacilAcesso.Droid
@@ -30,9 +31,10 @@ namespace FacilAcesso.Droid
 
             if (Control != null)
             {
+                Control.Background = new ColorDrawable(Android.Graphics.Color.Transparent);
                 //Control.SetBackgroundResource(Resource.Drawable.VLinkBackground);
-                Control.SetTextSize(Android.Util.ComplexUnitType.Dip, ((float)((Element as VSmallPicker)?.FontSize ?? 12.0)));
-                Control.SetPadding(10, 0, 0, 0);
+                //Control.SetTextSize(Android.Util.ComplexUnitType.Dip, ((float)((Element as VSmallPicker)?.FontSize ?? 12.0)));
+                //Control.SetPadding(10, 0, 0, 0);
                 Control.InputType = Android.Text.InputTypes.TextFlagNoSuggestions;
             }
         }

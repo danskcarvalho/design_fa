@@ -22,12 +22,14 @@ namespace FacilAcesso.iOS
 
             if (Control != null)
             {
-                Control.Layer.CornerRadius = 5;
-                Control.Layer.BorderWidth = 1;
-                Control.Layer.BorderColor = Color.FromHex("#D2E0E8").ToCGColor();
-                Control.BackgroundColor = Color.FromHex("#90FFFFFF").ToUIColor();
-                Control.Font = Control.Font.WithSize(14);
-                ResizeHeight();
+                Control.BackgroundColor = UIColor.FromRGBA(0, 0, 0, 0);
+                Control.BorderStyle = UITextBorderStyle.None;
+                //Control.Layer.CornerRadius = 5;
+                //Control.Layer.BorderWidth = 1;
+                //Control.Layer.BorderColor = Color.FromHex("#D2E0E8").ToCGColor();
+                //Control.BackgroundColor = Color.FromHex("#90FFFFFF").ToUIColor();
+                //Control.Font = Control.Font.WithSize(14);
+                //ResizeHeight();
             }
         }
 

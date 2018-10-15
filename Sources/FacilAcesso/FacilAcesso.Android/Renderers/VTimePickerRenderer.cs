@@ -13,6 +13,7 @@ using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
 using FacilAcesso;
 using System.ComponentModel;
+using Android.Graphics.Drawables;
 
 [assembly: ExportRenderer(typeof(VTimePicker), typeof(FacilAcesso.Droid.VTimePickerRenderer))]
 namespace FacilAcesso.Droid
@@ -35,12 +36,13 @@ namespace FacilAcesso.Droid
                 SetPlaceholder(view);
                 SetPlaceholderTextColor(view);
 
+                Control.Background = new ColorDrawable(Android.Graphics.Color.Transparent);
                 //Control.SetBackgroundResource(Resource.Drawable.VEntryBackground);
-                Control.SetPadding(30, 35, 30, 35);
-                Control.TextSize = 14;
+                //Control.SetPadding(30, 35, 30, 35);
+                //Control.TextSize = 14;
 
-                var thickness = (view as VTimePicker)?.Padding ?? new Thickness(30, 35, 30, 35);
-                Control.SetPadding((int)thickness.Left, (int)thickness.Top, (int)thickness.Right, (int)thickness.Bottom);
+                //var thickness = (view as VTimePicker)?.Padding ?? new Thickness(30, 35, 30, 35);
+                //Control.SetPadding((int)thickness.Left, (int)thickness.Top, (int)thickness.Right, (int)thickness.Bottom);
             }
         }
 

@@ -29,10 +29,12 @@ namespace FacilAcesso.Droid
 
             if (Control != null)
             {
-                var thickness = (e.NewElement as VEntry)?.Padding ?? new Thickness(30, 35, 30, 35);
+                Control.Background = new ColorDrawable(Android.Graphics.Color.Transparent);
+
+                //var thickness = (e.NewElement as VEntry)?.Padding ?? new Thickness(30, 35, 30, 35);
 
                 //Control.SetBackgroundResource(Resource.Drawable.VEntryBackground);
-                Control.SetPadding((int)thickness.Left, (int)thickness.Top, (int)thickness.Right, (int)thickness.Bottom);
+                //Control.SetPadding((int)thickness.Left, (int)thickness.Top, (int)thickness.Right, (int)thickness.Bottom);
                 if (e.NewElement?.IsPassword == false)
                     Control.InputType = Android.Text.InputTypes.TextFlagNoSuggestions;
             }
