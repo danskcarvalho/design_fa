@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:VContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.RecuperarSenhaPage"
+             ControlTemplate="{StaticResource PaginaVazada}"
+             NavigationPage.HasNavigationBar="False"
+             Title="Recuperar Senha">
+    <ScrollView>
+        <StackLayout Margin="40" Spacing="15">
+            <Label Style="{StaticResource TextoTitulo}" Text="Recupere a sua senha" Margin="0,30,0,0"></Label>
+            <Label Style="{StaticResource TextoNormal}" Text="Insira o e-mail cadastrado que enviaremos as instruções de como alterar a senha."></Label>
+            <Frame Style="{StaticResource FrameComponentes}" Margin="0,20,0,0">
+                <StackLayout Style="{StaticResource LayoutComponentes}">
+                    <StackLayout Style="{StaticResource EntryContainer}">
+                        <Image Source="ic_email.png" Style="{StaticResource EntryImage}"></Image>
+                        <local:VEntry Placeholder="E-mail" Style="{StaticResource Entry}"></local:VEntry>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Button Style="{StaticResource BotaoAzul}" Text="ENVIAR" Margin="0,20,0,0"></Button>
+        </StackLayout>
+    </ScrollView>
+</local:VContentPage>

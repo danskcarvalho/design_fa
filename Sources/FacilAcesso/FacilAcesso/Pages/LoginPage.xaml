@@ -13,7 +13,7 @@
                 <Frame Style="{StaticResource FrameComponentes}" Margin="0,40,0,0">
                     <StackLayout Style="{StaticResource LayoutComponentes}">
                         <StackLayout Style="{StaticResource EntryContainer}">
-                            <Image Source="ic_tag.png" Style="{StaticResource EntryImage}"></Image>
+                            <Image Source="ic_email.png" Style="{StaticResource EntryImage}"></Image>
                             <local:VEntry Placeholder="CPF" Style="{StaticResource Entry}"></local:VEntry>
                         </StackLayout>
                         <StackLayout Style="{StaticResource Separator}"></StackLayout>

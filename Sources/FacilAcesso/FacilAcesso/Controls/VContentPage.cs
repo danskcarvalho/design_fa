@@ -14,6 +14,8 @@ namespace FacilAcesso
            BindableProperty.Create("IsLoading", typeof(bool), typeof(VContentPage), false);
         public static readonly BindableProperty GoBackCommandProperty =
             BindableProperty.Create("GoBackCommand", typeof(ICommand), typeof(VContentPage), null);
+        public static readonly BindableProperty ShowMenuCommandProperty =
+            BindableProperty.Create("ShowMenuCommand", typeof(ICommand), typeof(VContentPage), null);
         public static readonly BindableProperty IsPopupVisibleProperty =
             BindableProperty.Create("IsPopupVisible", typeof(bool), typeof(VContentPage), false);
         public static readonly BindableProperty PopupContentProperty =
@@ -31,6 +33,45 @@ namespace FacilAcesso
             {
                 await this.Navigation.PopAsync();
             });
+            ShowMenuCommand = new Command(() =>
+            {
+                ShowMenu();
+            });
+        }
+
+        private void ShowMenu()
+        {
+            var masterDetail = GoToMasterPage();
+            if (masterDetail != null)
+                masterDetail.IsPresented = true;
+        }
+        private Xamarin.Forms.MasterDetailPage GoToMasterPage()
+        {
+            try
+            {
+                Element current = this;
+                while (current != null && !(current is Xamarin.Forms.MasterDetailPage))
+                {
+                    current = current.Parent;
+                }
+
+                if (current != null)
+                    return (Xamarin.Forms.MasterDetailPage)current;
+                else
+                {
+                    foreach (var page in this.Navigation.NavigationStack)
+                    {
+                        if (page is Xamarin.Forms.MasterDetailPage)
+                            return (Xamarin.Forms.MasterDetailPage)page;
+                    }
+
+                    return null;
+                }
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public bool IsLoading
@@ -42,6 +83,11 @@ namespace FacilAcesso
         {
             get { return (ICommand)GetValue(GoBackCommandProperty); }
             set { SetValue(GoBackCommandProperty, value); }
+        }
+        public ICommand ShowMenuCommand
+        {
+            get { return (ICommand)GetValue(ShowMenuCommandProperty); }
+            set { SetValue(ShowMenuCommandProperty, value); }
         }
         public bool IsPopupVisible
         {

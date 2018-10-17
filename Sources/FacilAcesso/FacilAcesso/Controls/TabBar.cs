@@ -48,6 +48,9 @@ namespace FacilAcesso
     [ContentProperty("Tabs")]
     public class TabBar : Grid
     {
+        private static readonly Color TabBackground = Color.FromHex("#2A4B9B");
+        private static readonly Color TabHighlight = Color.FromHex("#FFD83E");
+
         protected override void OnBindingContextChanged()
         {
             foreach (var item in Tabs)
@@ -84,7 +87,7 @@ namespace FacilAcesso
             {
                 foreach (var item in Children)
                 {
-                    if (item is StackLayout && ((StackLayout)item).BackgroundColor == Color.White)
+                    if (item is StackLayout && ((StackLayout)item).BackgroundColor == TabHighlight)
                     {
                         var stripe = item as StackLayout;
                         if (Grid.GetColumn(stripe) == SelectedIndex)
@@ -136,7 +139,7 @@ namespace FacilAcesso
         public TabBar()
         {
             Padding = 0;
-            BackgroundColor = Color.FromHex("#5A96D2");
+            BackgroundColor = TabBackground;
             ColumnSpacing = 0;
             RowSpacing = 0;
             
@@ -233,7 +236,7 @@ namespace FacilAcesso
                 };
                 var stripe = new StackLayout()
                 {
-                    BackgroundColor = Color.White,
+                    BackgroundColor = TabHighlight,
                     IsVisible = SelectedIndex == i,
                     HeightRequest = 4,
                     Margin = new Thickness(0, 0, 0, 1)
@@ -294,16 +297,16 @@ namespace FacilAcesso
 
                 var stripe = new StackLayout()
                 {
-                    BackgroundColor = Color.White,
+                    BackgroundColor = TabHighlight,
                     IsVisible = SelectedIndex == i,
-                    Margin = new Thickness(0, 0, 0, 1)
+                    Margin = new Thickness(0, 0, 0, 0)
                 };
                 stripe.GestureRecognizers.Add(tap);
 
                 var background = new StackLayout()
                 {
                     IsVisible = true,
-                    BackgroundColor = Color.FromHex("#5A96D2"),
+                    BackgroundColor = TabBackground,
                     HorizontalOptions = LayoutOptions.FillAndExpand,
                     VerticalOptions = LayoutOptions.FillAndExpand
                 };

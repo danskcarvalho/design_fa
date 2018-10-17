@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FacilAcesso.FacilAcessoMasterDetailPage"
+             xmlns:pages="clr-namespace:FacilAcesso"
+             NavigationPage.HasNavigationBar="False">
+    <MasterDetailPage.Master>
+        <pages:FacilAcessoMasterPage />
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage BarTextColor="White" BarBackgroundColor="#2A4B9B">
+            <x:Arguments>
+                <pages:OndeEstacionarPage />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

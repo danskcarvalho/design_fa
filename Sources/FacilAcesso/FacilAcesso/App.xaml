@@ -35,6 +35,12 @@
                 <Setter Property="TextColor" Value="#787876" />
                 <Setter Property="FontSize" Value="14" />
             </Style>
+            <Style TargetType="Label" x:Key="TextoTitulo">
+                <Setter Property="TextColor" Value="#2A4B9B" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
             <Style TargetType="Label" x:Key="HeaderText">
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="VerticalTextAlignment" Value="Center" />
@@ -186,18 +192,119 @@
                                 </AbsoluteLayout.HeightRequest>
                                 
                                 <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                                    <Image Source="logo_navbar.png" HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+                                        <Image.HeightRequest>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="74" Android="54" />
+                                        </Image.HeightRequest>
+                                    </Image>
+                                </StackLayout>
+                                <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
                                     <Button Command="{TemplateBinding GoBackCommand}" Image="back.png" VerticalOptions="Center" HorizontalOptions="Start" BackgroundColor="Transparent" BorderWidth="0" WidthRequest="50">
                                         <Button.HeightRequest>
                                             <OnPlatform x:TypeArguments="x:Double" iOS="74" Android="54" />
                                         </Button.HeightRequest>
                                     </Button>
                                 </StackLayout>
+                            </AbsoluteLayout>
+                        </StackLayout>
+
+                        <StackLayout Padding="0" Margin="0" Grid.Row="1" Grid.Column="0">
+                            <ContentPresenter HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                        </StackLayout>
+                    </Grid>
+                    <ContentView IsVisible="{TemplateBinding IsPopupVisible}" BackgroundColor="#7F000000" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                        <Grid RowSpacing="0" ColumnSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="30"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Frame CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" Grid.Row="2" Grid.Column="2">
+                                <local:VScrollView VContent="{TemplateBinding PopupContent}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></local:VScrollView>
+                            </Frame>
+
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="1"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="2"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="3"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="4"></StackLayout>
+
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="1"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="2"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="3"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="4"></StackLayout>
+
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="0"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="1"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="3"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="4"></StackLayout>
+
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="0"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="1"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="2"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="3"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="4"></StackLayout>
+
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="4" Grid.Column="0"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="4" Grid.Column="1"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="4" Grid.Column="2"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="4" Grid.Column="3"></StackLayout>
+                            <StackLayout local:EventBehavior.Tapped="{TemplateBinding ClosePopupCommand}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="4" Grid.Column="4"></StackLayout>
+                        </Grid>
+                    </ContentView>
+                </AbsoluteLayout>
+            </ControlTemplate>
+            <ControlTemplate x:Key="PaginaMenu">
+                <AbsoluteLayout BackgroundColor="White">
+                    <Grid AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" RowSpacing="0" ColumnSpacing="0" BackgroundColor="Transparent">
+                        <Grid.RowDefinitions>
+                            <RowDefinition>
+                                <RowDefinition.Height>
+                                    <OnPlatform x:TypeArguments="GridLength" iOS="74" Android="54" />
+                                </RowDefinition.Height>
+                            </RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Style="{StaticResource Header}" Orientation="Horizontal" Spacing="0" Grid.Row="0" Grid.Column="0">
+                            <StackLayout.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="74" Android="54" />
+                            </StackLayout.HeightRequest>
+                            <StackLayout.Padding>
+                                <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" Android="0" />
+                            </StackLayout.Padding>
+                            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <AbsoluteLayout.HeightRequest>
+                                    <OnPlatform x:TypeArguments="x:Double" iOS="74" Android="54" />
+                                </AbsoluteLayout.HeightRequest>
+
                                 <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
-                                    <Image Source="logo_navbar.png" HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+                                    <Image Source="logo_navbar2.png" HorizontalOptions="Center" VerticalOptions="FillAndExpand">
                                         <Image.HeightRequest>
                                             <OnPlatform x:TypeArguments="x:Double" iOS="74" Android="54" />
                                         </Image.HeightRequest>
                                     </Image>
+                                </StackLayout>
+                                <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                                    <Button Command="{TemplateBinding ShowMenuCommand}" Image="menu.png" VerticalOptions="Center" HorizontalOptions="Start" BackgroundColor="Transparent" BorderWidth="0" WidthRequest="50">
+                                        <Button.HeightRequest>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="74" Android="54" />
+                                        </Button.HeightRequest>
+                                    </Button>
                                 </StackLayout>
                             </AbsoluteLayout>
                         </StackLayout>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:VContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.OndeEstacionarPage"
+             NavigationPage.HasNavigationBar="False"
+             ControlTemplate="{StaticResource PaginaMenu}"
+             Title="Onde Estacionar">
+    <StackLayout Spacing="0">
+        <local:TabNavigation 
+            SelectedIndex="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout local:TabNavigation.Title="MAPA">
+                <ContentView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#D8D8D9">
+                    <Label Text="GOOGLE MAPS" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center" TextColor="Black" FontSize="14"></Label>
+                </ContentView>
+            </StackLayout>
+            <StackLayout local:TabNavigation.Title="LISTA">
+            </StackLayout>
+        </local:TabNavigation>
+        <Frame Style="{StaticResource FrameComponentes}" CornerRadius="0" Padding="15">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+                <Image Source="ic_ticket_facil_acesso.png" HeightRequest="20"></Image>
+                <Label Text="ESTACIONAR" TextColor="#2A4B9B" FontSize="13"></Label>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</local:VContentPage>

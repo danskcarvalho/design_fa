@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:VContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.FacilAcessoMasterPage"
+             Title="Menu">
+    <StackLayout Spacing="0">
+        <StackLayout Spacing="5" BackgroundColor="#2A4B9B" Padding="15, 20">
+            <Label Text="João da Silva" TextColor="White" FontSize="12"></Label>
+            <Label Text="joaodasilva@mail.com" TextColor="White" FontSize="12"></Label>
+        </StackLayout>
+        <ScrollView>
+            <StackLayout Padding="15" Spacing="0">
+                <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <Image Source="ic_parking.png" HeightRequest="18" WidthRequest="18"></Image>
+                    <Label Text="Onde Estacionar" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <Image Source="ic_car.png" HeightRequest="18" WidthRequest="18"></Image>
+                    <Label Text="Meus condomínios" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <Image Source="ic_history.png" HeightRequest="18" WidthRequest="18"></Image>
+                    <Label Text="Histórico de uso" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <Image Source="ic_invite.png" HeightRequest="18" WidthRequest="18"></Image>
+                    <Label Text="Meus dados" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <Image Source="ic_credit_card.png" HeightRequest="18" WidthRequest="18"></Image>
+                    <Label Text="Cartão de crédito" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <Image Source="ic_credits.png" HeightRequest="18" WidthRequest="18"></Image>
+                    <Label Text="Meus créditos" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <Image Source="ic_invite.png" HeightRequest="18" WidthRequest="18"></Image>
+                    <Label Text="Meus convites" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <Image Source="ic_check.png" HeightRequest="18" WidthRequest="18"></Image>
+                    <Label Text="Carimbar acesso" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <Image Source="ic_information.png" HeightRequest="18" WidthRequest="18"></Image>
+                    <Label Text="Fale com a Fácil Acesso" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</local:VContentPage>

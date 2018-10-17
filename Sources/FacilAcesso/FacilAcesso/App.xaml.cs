@@ -11,7 +11,7 @@ namespace FacilAcesso
         {
             InitializeComponent();
 
-            var navigationPage = new NavigationPage(new CriarContaPage());
+            var navigationPage = new NavigationPage(new FacilAcessoMasterDetailPage());
             navigationPage.BarTextColor = Color.White;
             navigationPage.BarBackgroundColor = Color.FromHex("#1D346B");
             MainPage = navigationPage;
