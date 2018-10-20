@@ -14,7 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="CriarNovaSenhaModal.xaml">
+    <EmbeddedResource Update="Pages\CartaoCreditoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Modal\CriarNovaSenhaModal.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\MeusDadosPage.xaml">

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:VContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.CartaoCreditoPage"
+             ControlTemplate="{StaticResource PaginaNormal}"
+             NavigationPage.HasNavigationBar="False"
+             Title="Cartão de Crédito">
+    <ScrollView>
+        <StackLayout Spacing="0">
+            <AbsoluteLayout HeightRequest="200">
+                <AbsoluteLayout AbsoluteLayout.LayoutBounds="0,0,1,150" AbsoluteLayout.LayoutFlags="WidthProportional" BackgroundColor="#2A4B9B" IsClippedToBounds="False">
+                </AbsoluteLayout>
+
+                <Frame Padding="16,16,16,16" AbsoluteLayout.LayoutBounds="0.5,25,280,175" AbsoluteLayout.LayoutFlags="XProportional" Margin="0,0,0,0" WidthRequest="280" HeightRequest="175" BackgroundColor="#FAFAFA" CornerRadius="5">
+                    <StackLayout VerticalOptions="FillAndExpand">
+                        <StackLayout Padding="0,22,0,0" VerticalOptions="FillAndExpand">
+                            <FlexLayout AlignItems="Center" HorizontalOptions="FillAndExpand" JustifyContent="SpaceBetween">
+                                <Label Text="&#8226;&#8226;&#8226;&#8226;" FontSize="25"></Label>
+                                <Label Text="&#8226;&#8226;&#8226;&#8226;" FontSize="25"></Label>
+                                <Label Text="&#8226;&#8226;&#8226;&#8226;" FontSize="25"></Label>
+                                <Label Text="5678" FontSize="25"></Label>
+                            </FlexLayout>
+                            <StackLayout VerticalOptions="FillAndExpand">
+
+                            </StackLayout>
+                            <FlexLayout AlignItems="Center" HorizontalOptions="FillAndExpand" JustifyContent="SpaceBetween" Wrap="NoWrap">
+                                <StackLayout>
+                                    <Label Text="Nome" FontSize="9" TextColor="#CDCDCD"></Label>
+                                    <Label Text="JOÃO DA SILVA" LineBreakMode="TailTruncation" FontSize="10"></Label>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Label Text="Validade" FontSize="9" TextColor="#CDCDCD"></Label>
+                                    <Label Text="03/2022" FontSize="10"></Label>
+                                </StackLayout>
+                                <Image Source="ic_mastercard.png" HeightRequest="40"></Image>
+                            </FlexLayout>
+                        </StackLayout>
+                        <StackLayout VerticalOptions="FillAndExpand" IsVisible="False">
+                            <Label TextColor="#D1D1D1" Text="Não há cartão cadastrado" FontSize="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </AbsoluteLayout>
+            <Label Text="Cartão inserido!" Style="{StaticResource TextoTitulo}" Margin="15,20,15,0" HorizontalTextAlignment="Center"></Label>
+            <Label Text="Agora é só estacionar ;)" Style="{StaticResource TextoTitulo}" Margin="15,0,15,0" HorizontalTextAlignment="Center"></Label>
+
+            <Button Style="{StaticResource BotaoVazado}" Text="Cadastrar novo cartão" Margin="15,20,15,0"></Button>
+        </StackLayout>
+    </ScrollView>
+</local:VContentPage>
