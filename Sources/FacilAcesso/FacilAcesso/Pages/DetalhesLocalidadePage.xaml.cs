@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace FacilAcesso
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class OndeEstacionarPage : VContentPage
+	public partial class DetalhesLocalidadePage : VContentPage
 	{
-		public OndeEstacionarPage ()
+		public DetalhesLocalidadePage ()
 		{
 			InitializeComponent ();
 		}

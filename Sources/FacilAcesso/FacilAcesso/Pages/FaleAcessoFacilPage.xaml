@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:VContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.FaleAcessoFacilPage"
+             NavigationPage.HasNavigationBar="False"
+             ControlTemplate="{StaticResource PaginaNormal}"
+             Title="Fale com a Acesso Fácil">
+    <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Image Aspect="AspectFill" Source="bg_parking.png" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"></Image>
+        <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="40" Spacing="5">
+                <Image Margin="0,10,0,0" Source="logo_home.png" Aspect="AspectFit" HorizontalOptions="FillAndExpand"></Image>
+                <Frame Style="{StaticResource FrameComponentes}" Margin="0,50,0,0" Padding="8">
+                    <StackLayout Spacing="8">
+                        <Label Text="4004-5678" FontSize="35" TextColor="#2A4B9B" HorizontalTextAlignment="Center"></Label>
+                        <Label Text="contato@facilacesso.com.br" FontSize="20" TextColor="#2A4B9B" HorizontalTextAlignment="Center"></Label>
+                        <StackLayout HeightRequest="1" BackgroundColor="#ECEAE8"></StackLayout>
+                        <Label Text="www.facilacesso.com.br" FontSize="20" TextColor="#2A4B9B" HorizontalTextAlignment="Center"></Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </AbsoluteLayout>
+</local:VContentPage>

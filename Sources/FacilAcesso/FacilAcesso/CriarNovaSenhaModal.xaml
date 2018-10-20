@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:VContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.CriarNovaSenhaModal">
+    <StackLayout Margin="20">
+        <Label Text="Criar nova senha" Style="{StaticResource TextoTitulo}" Margin="0,0,0,10" HorizontalTextAlignment="Center"></Label>
+        <Frame Style="{StaticResource FrameComponentes}">
+            <StackLayout Style="{StaticResource LayoutComponentes}">
+                <StackLayout Style="{StaticResource EntryContainer}">
+                    <Image Source="ic_tag.png" Style="{StaticResource EntryImage}"></Image>
+                    <local:VEntry Placeholder="Nova senha                  " Style="{StaticResource Entry}"></local:VEntry>
+                </StackLayout>
+                <StackLayout Style="{StaticResource Separator}"></StackLayout>
+                <StackLayout Style="{StaticResource EntryContainer}">
+                    <Image Source="ic_tag.png" Style="{StaticResource EntryImage}"></Image>
+                    <local:VEntry Placeholder="Confirmar nova senha                  " Style="{StaticResource Entry}"></local:VEntry>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+        <Button Style="{StaticResource BotaoAzul}" Text="      CRIAR NOVA SENHA      " Margin="0,20,0,0"></Button>
+    </StackLayout>
+</local:VContentView>

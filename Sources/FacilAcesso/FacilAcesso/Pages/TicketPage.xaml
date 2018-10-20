@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:VContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.TicketPage"
+             NavigationPage.HasNavigationBar="False"
+             ControlTemplate="{StaticResource PaginaNormal}"
+             Title="Ticket">
+    <local:BottomPanelLayout>
+        <local:BottomPanelLayout.MainView>
+            <ScrollView Padding="0" Margin="0">
+                <StackLayout Spacing="0">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,15,0,0">
+                    <Image Source="ic_ticket_facil_acesso.png" WidthRequest="26" HeightRequest="26" VerticalOptions="Center"></Image>
+                    <Label TextColor="#2A4B9B" Text="TICKET FÁCIL ACESSO" FontSize="13" VerticalOptions="Center"></Label>
+                </StackLayout>
+                    <Frame CornerRadius="0" HorizontalOptions="Center" Margin="0,20,0,0" Padding="7">
+                        <Image Source="qrcode.jpg" HorizontalOptions="FillAndExpand" WidthRequest="150"></Image>
+                    </Frame>
+                    <StackLayout Spacing="12" Margin="0,20,0,0" IsVisible="False">
+                        <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+                            <Image Source="ic_parking.png" HeightRequest="12" WidthRequest="12"></Image>
+                            <StackLayout Spacing="0">
+                                <Label Text="Local" FontSize="12" TextColor="Black" FontAttributes="Bold"></Label>
+                                <Label Text="Salvador Shopping" FontSize="12" TextColor="#262626"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+                            <Image Source="ic_entrance.png" HeightRequest="16" WidthRequest="16"></Image>
+                            <StackLayout Spacing="0">
+                                <Label Text="Entrada" FontSize="12" TextColor="Black" FontAttributes="Bold"></Label>
+                                <Label Text="13/08/2016 às 12:55 hs" FontSize="12" TextColor="#262626"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+                            <Image Source="ic_exit.png" HeightRequest="16" WidthRequest="16"></Image>
+                            <StackLayout Spacing="0">
+                                <Label Text="Saída" FontSize="12" TextColor="Black" FontAttributes="Bold"></Label>
+                                <Label Text="13/08/2016 às 12:55 hs" FontSize="12" TextColor="#262626"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+                            <Image Source="ic_value.png" HeightRequest="16" WidthRequest="16"></Image>
+                            <StackLayout Spacing="0">
+                                <Label Text="Valor" FontSize="12" TextColor="Black" FontAttributes="Bold"></Label>
+                                <Label Text="R$ 6,00" FontSize="12" TextColor="#262626"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Margin="0,15,0,0" Spacing="0">
+                        <Label Text="ESTE TICKET TEM VALIDADE DE 10 MINUTOS." Style="{StaticResource TextoPequeno}" TextColor="#777777" HorizontalTextAlignment="Center"></Label>
+                        <Label Text="12:55" FontSize="55" TextColor="Black" HorizontalTextAlignment="Center" Margin="0,30,0,0"></Label>
+                        <Label Text="13 DE AGOSTO DE 2019" Style="{StaticResource TextoPequeno}" TextColor="Black" HorizontalTextAlignment="Center" Margin="0"></Label>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </local:BottomPanelLayout.MainView>
+        <local:BottomPanelLayout.BottomView>
+            <Frame Padding="7" CornerRadius="0" BorderColor="#F9F9F9">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="0" Grid.Column="0" Spacing="0">
+                        <Image Source="ic_timer.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="Center"></Image>
+                        <Label Text="Permanência" Style="{StaticResource TextoPequeno}" TextColor="Black" HorizontalTextAlignment="Center" Margin="0"></Label>
+                        <Label Text="00:35" FontSize="45" TextColor="Black" HorizontalTextAlignment="Center" Margin="0,-7,0,0"></Label>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="0" Grid.Column="1" Spacing="0">
+                        <Image Source="ic_value.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="Center"></Image>
+                        <Label Text="A pagar (R$)" Style="{StaticResource TextoPequeno}" TextColor="Black" HorizontalTextAlignment="Center" Margin="0"></Label>
+                        <Label Text="6,00" FontSize="45" TextColor="Black" HorizontalTextAlignment="Center" Margin="0,-7,0,0"></Label>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+        </local:BottomPanelLayout.BottomView>
+    </local:BottomPanelLayout>
+    
+</local:VContentPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:VContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.HistoricoUsoPage"
+             NavigationPage.HasNavigationBar="False"
+             ControlTemplate="{StaticResource PaginaNormal}"
+             Title="Histórico de uso">
+    <StackLayout Spacing="0">
+        <Label FontSize="12" Margin="15, 10">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="saldo: " TextColor="Black"></Span>
+                    <Span Text="R$ 50,00" TextColor="#2A4B9B" FontAttributes="Bold"></Span>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <StackLayout HeightRequest="1" BackgroundColor="#F9F9F9"></StackLayout>
+        <ListView SeparatorVisibility="None" x:Name="listView" local:EventBehavior.Unselectable="True" HasUnevenRows="True" VerticalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,7">
+                            <Image Source="ic_parking.png" HeightRequest="12" WidthRequest="12"></Image>
+                            <StackLayout Spacing="0">
+                                <Label Text="Salvador Shopping" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
+                                <Label Text="13/08/2018, 12:55hs - 13:32hs" FontSize="12" TextColor="Black"></Label>
+                                <Label FontSize="12">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="R$ 6,00 " TextColor="Black"></Span>
+                                            <Span Text="cartão de crédito" TextColor="#2A4B9B"></Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Frame Style="{StaticResource FrameComponentes}" CornerRadius="0" Padding="15">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+                <Image Source="ic_ticket_facil_acesso.png" HeightRequest="20"></Image>
+                <Label Text="Comprar créditos" TextColor="#2A4B9B" FontSize="13"></Label>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</local:VContentPage>

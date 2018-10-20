@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:VContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.DetalhesLocalidadePage"
+             NavigationPage.HasNavigationBar="False"
+             ControlTemplate="{StaticResource PaginaNormal}"
+             Title="Detalhe">
+    <ScrollView>
+        <StackLayout Spacing="0">
+            <Label TextColor="#2A4B9B" Text="Salvador Shopping Business" FontSize="12" Margin="15,20" FontAttributes="Bold"></Label>
+            <Image Source="salvador_shopping.jpg" Aspect="AspectFill" HeightRequest="160" HorizontalOptions="FillAndExpand"></Image>
+            <Label TextColor="Black" Text="Alameda Salvador, 1057 - Caminho das Árvores," FontSize="12" Margin="15,10,15,0"></Label>
+            <Label TextColor="Black" Text="Salvador - BA, 41820-790" FontSize="12" Margin="15,0,15,0"></Label>
+
+            <Label TextColor="Black" FontAttributes="Bold" Text="Balcão de informação" FontSize="12" Margin="15,10,15,0"></Label>
+            <Label TextColor="Black" Text="Garagem 3 - próximo ao elevador" FontSize="12" Margin="15,0,15,0"></Label>
+
+            <StackLayout Margin="15,20,15,0" Orientation="Horizontal">
+                <Label TextColor="Black" FontAttributes="Bold" Text="Localização" FontSize="12" VerticalOptions="Center"></Label>
+                <StackLayout HorizontalOptions="FillAndExpand"></StackLayout>
+                <Frame Padding="0" BorderColor="#F4F4F4" CornerRadius="5" HasShadow="False" BackgroundColor="#FAFAFA" VerticalOptions="Center">
+                    <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Margin="25,8">
+                        <Image Source="ic_route.jpg" HeightRequest="15" WidthRequest="15"></Image>
+                        <Label TextColor="Black" Text="Rota" FontSize="11"></Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <Image Source="google_maps.jpg" Aspect="AspectFill" HeightRequest="130" HorizontalOptions="FillAndExpand" Margin="0,10,0,0"></Image>
+        </StackLayout>
+    </ScrollView>
+</local:VContentPage>

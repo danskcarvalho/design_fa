@@ -127,7 +127,7 @@
                                 <ColumnDefinition Width="30"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
 
-                            <Frame CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" Grid.Row="2" Grid.Column="2">
+                            <Frame CornerRadius="5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" Grid.Row="2" Grid.Column="2">
                                 <local:VScrollView VContent="{TemplateBinding PopupContent}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></local:VScrollView>
                             </Frame>
 
@@ -229,7 +229,7 @@
                                 <ColumnDefinition Width="30"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
 
-                            <Frame CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" Grid.Row="2" Grid.Column="2">
+                            <Frame CornerRadius="5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" Grid.Row="2" Grid.Column="2">
                                 <local:VScrollView VContent="{TemplateBinding PopupContent}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></local:VScrollView>
                             </Frame>
 
@@ -330,7 +330,7 @@
                                 <ColumnDefinition Width="30"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
 
-                            <Frame CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" Grid.Row="2" Grid.Column="2">
+                            <Frame CornerRadius="5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" Grid.Row="2" Grid.Column="2">
                                 <local:VScrollView VContent="{TemplateBinding PopupContent}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></local:VScrollView>
                             </Frame>
 

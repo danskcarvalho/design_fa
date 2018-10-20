@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:VContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.DetalhesEstacionamentoPage"
+             NavigationPage.HasNavigationBar="False"
+             ControlTemplate="{StaticResource PaginaNormal}"
+             Title="Salvador Shopping">
+    <StackLayout Spacing="12">
+        <AbsoluteLayout HeightRequest="200">
+            <Image Source="salvador_shopping.jpg" Aspect="AspectFill" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"></Image>
+            <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#66000000">
+                <StackLayout VerticalOptions="FillAndExpand"></StackLayout>
+                <Label Text="Salvador Shopping" TextColor="White" FontSize="22" Margin="15"></Label>
+            </StackLayout>
+        </AbsoluteLayout>
+        <Label Text="Valores do estacionamento" FontSize="12" Margin="15,0,0,0" TextColor="Black"></Label>
+        <StackLayout BackgroundColor="#E2E2E2" HeightRequest="1"></StackLayout>
+        <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+            <Image Source="ic_value.png" HeightRequest="16" WidthRequest="16"></Image>
+            <StackLayout Spacing="0">
+                <Label Text="30 primeiros minutos" FontSize="12" TextColor="Black"></Label>
+                <Label Text="R$ 0,00" FontSize="12" TextColor="#262626"></Label>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+            <Image Source="ic_car.png" HeightRequest="16" WidthRequest="16"></Image>
+            <StackLayout Spacing="0">
+                <Label Text="2 primeiras horas" FontSize="12" TextColor="Black"></Label>
+                <Label Text="R$ 6,00" FontSize="12" TextColor="#262626"></Label>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+            <Image Source="ic_car.png" HeightRequest="16" WidthRequest="16"></Image>
+            <StackLayout Spacing="0">
+                <Label Text="A cada hora ou fração adicional" FontSize="12" TextColor="Black"></Label>
+                <Label Text="R$ 1,00" FontSize="12" TextColor="#262626"></Label>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+            <Image Source="ic_moto.png" HeightRequest="16" WidthRequest="16"></Image>
+            <StackLayout Spacing="0">
+                <Label Text="A cada hora" FontSize="12" TextColor="Black"></Label>
+                <Label Text="R$ 1,00" FontSize="12" TextColor="#262626"></Label>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</local:VContentPage>

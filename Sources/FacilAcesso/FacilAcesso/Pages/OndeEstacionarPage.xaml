@@ -10,12 +10,21 @@
         <local:TabNavigation 
             SelectedIndex="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout local:TabNavigation.Title="MAPA">
-                <ContentView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#D8D8D9">
-                    <Label Text="GOOGLE MAPS" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center"
-                           VerticalTextAlignment="Center" TextColor="Black" FontSize="14"></Label>
-                </ContentView>
+                <Image Source="google_maps.jpg" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Image>
             </StackLayout>
             <StackLayout local:TabNavigation.Title="LISTA">
+                <ListView SeparatorVisibility="None" x:Name="listView" local:EventBehavior.Unselectable="True" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Spacing="0" Margin="15,7">
+                                    <Label Text="Salvador Shopping" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
+                                    <Label Text="3km de distância" FontSize="12" TextColor="Black"></Label>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </StackLayout>
         </local:TabNavigation>
         <Frame Style="{StaticResource FrameComponentes}" CornerRadius="0" Padding="15">
