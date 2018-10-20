@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:VContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.EmailEnviadoPage"
+             NavigationPage.HasNavigationBar="False"
+             ControlTemplate="{StaticResource PaginaVazada}"
+             Title="Salvador Shopping">
+    <ScrollView>
+        <StackLayout Margin="40" Spacing="15">
+            <Label Style="{StaticResource TextoTitulo}" Text="E-mail enviado!" Margin="0,30,0,0"></Label>
+            <Label Style="{StaticResource TextoNormal}" Text="Insira o código enviado para o seu e-mail para que você possa criar nova senha."></Label>
+            <Frame Style="{StaticResource FrameComponentes}" Margin="0,20,0,0">
+                <StackLayout Style="{StaticResource LayoutComponentes}">
+                    <StackLayout Style="{StaticResource EntryContainer}">
+                        <Image Source="ic_tag.png" Style="{StaticResource EntryImage}"></Image>
+                        <local:VEntry Placeholder="Código" Style="{StaticResource Entry}"></local:VEntry>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Button Style="{StaticResource BotaoAzul}" Text="ENVIAR" Margin="0,20,0,0"></Button>
+        </StackLayout>
+    </ScrollView>
+</local:VContentPage>

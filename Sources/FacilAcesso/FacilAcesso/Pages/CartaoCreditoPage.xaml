@@ -45,7 +45,7 @@
             <Label Text="Cartão inserido!" Style="{StaticResource TextoTitulo}" Margin="15,20,15,0" HorizontalTextAlignment="Center"></Label>
             <Label Text="Agora é só estacionar ;)" Style="{StaticResource TextoTitulo}" Margin="15,0,15,0" HorizontalTextAlignment="Center"></Label>
 
-            <Button Style="{StaticResource BotaoVazado}" Text="Cadastrar novo cartão" Margin="15,20,15,0"></Button>
+            <Button Style="{StaticResource BotaoVazado}" Text="Cadastrar novo cartão" Margin="15,20,15,0" Clicked="Button_Clicked"></Button>
         </StackLayout>
     </ScrollView>
 </local:VContentPage>

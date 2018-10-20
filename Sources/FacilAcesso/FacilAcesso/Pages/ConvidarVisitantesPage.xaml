@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:VContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.ConvidarVisitantesPage"
+             NavigationPage.HasNavigationBar="False"
+             ControlTemplate="{StaticResource PaginaNormal}"
+             Title="Convidar visitantes">
+    <ScrollView>
+        <StackLayout Spacing="10" Margin="15">
+            <Label Text="Indique as informações do visitante que terá acesso ao condomínio abaixo:" TextColor="#2A4B9B" FontAttributes="Bold" FontSize="12"></Label>
+            <StackLayout Spacing="0">
+                <Label Text="condomínio" TextColor="Black" FontSize="12"></Label>
+                <Label Text="Salvador Shopping Business" TextColor="Black" FontAttributes="Bold" FontSize="12"></Label>
+            </StackLayout>
+            <Frame Style="{StaticResource FrameComponentes}">
+                <StackLayout Style="{StaticResource LayoutComponentes}">
+                    <local:VEntry Placeholder="Nome do visitante" Style="{StaticResource Entry}"></local:VEntry>
+                    <StackLayout Style="{StaticResource Separator}"></StackLayout>
+                    <local:VEntry Placeholder="CPF" Style="{StaticResource Entry}"></local:VEntry>
+                    <StackLayout Style="{StaticResource Separator}"></StackLayout>
+                    <local:VEntry Placeholder="E-mail" Style="{StaticResource Entry}"></local:VEntry>
+                    <StackLayout Style="{StaticResource Separator}"></StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <local:VEntry Placeholder="Data início" Style="{StaticResource Entry}" HorizontalOptions="FillAndExpand"></local:VEntry>
+                        <StackLayout Style="{StaticResource HorizontalSeparator}"></StackLayout>
+                        <local:VEntry Placeholder="Data fim" Style="{StaticResource Entry}" HorizontalOptions="FillAndExpand"></local:VEntry>
+                    </StackLayout>
+                    <StackLayout Style="{StaticResource Separator}"></StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <local:VEntry Placeholder="Hora início" Style="{StaticResource Entry}" HorizontalOptions="FillAndExpand"></local:VEntry>
+                        <StackLayout Style="{StaticResource HorizontalSeparator}"></StackLayout>
+                        <local:VEntry Placeholder="Hora fim" Style="{StaticResource Entry}" HorizontalOptions="FillAndExpand"></local:VEntry>
+                    </StackLayout>
+                    <StackLayout Style="{StaticResource Separator}"></StackLayout>
+                    <local:VEntry Placeholder="Tipo de convite" Style="{StaticResource Entry}"></local:VEntry>
+                </StackLayout>
+            </Frame>
+            <Button Style="{StaticResource BotaoAmarelo}" Text="CADASTRAR CONVITE" Margin="0,20,0,0"></Button>
+        </StackLayout>
+    </ScrollView>
+</local:VContentPage>

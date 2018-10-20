@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:VContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.NovaSenhaCadastradaPage"
+             ControlTemplate="{StaticResource PaginaVazada}"
+             NavigationPage.HasNavigationBar="False"
+             Title="Nova Senha cadastrada">
+    <ScrollView>
+        <StackLayout>
+            <Frame Padding="30" Margin="0,130,0,0" HorizontalOptions="Center" BackgroundColor="White">
+                <StackLayout Spacing="0">
+                    <Image HeightRequest="80" Source="logo.png" Aspect="AspectFit" HorizontalOptions="FillAndExpand"></Image>
+                    <Label Text="Nova senha cadastrada!" Style="{StaticResource TextoTitulo}" Margin="0,20,0,0" HorizontalTextAlignment="Center"></Label>
+                    <Label Text="Agora é só estacionar ;)" Style="{StaticResource TextoTitulo}" HorizontalTextAlignment="Center"></Label>
+                </StackLayout>
+            </Frame>
+            <Button Style="{StaticResource BotaoAzul}" Text="ACESSAR" Margin="20,30,20,0"></Button>
+        </StackLayout>
+    </ScrollView>
+</local:VContentPage>

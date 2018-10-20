@@ -17,6 +17,12 @@
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="Margin" Value="0" />
             </Style>
+            <Style TargetType="StackLayout" x:Key="HorizontalSeparator">
+                <Setter Property="WidthRequest" Value="1" />
+                <Setter Property="BackgroundColor" Value="#E9E9E9" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="Margin" Value="0" />
+            </Style>
             <Style TargetType="StackLayout" x:Key="EntryContainer">
                 <Setter Property="Spacing" Value="5" />
                 <Setter Property="Margin" Value="8,0,0,0" />
@@ -71,6 +77,11 @@
                 <Setter Property="BackgroundColor" Value="#2A4B9B" />
                 <Setter Property="CornerRadius" Value="100" />
                 <Setter Property="TextColor" Value="White" />
+            </Style>
+            <Style TargetType="Button" x:Key="BotaoAmarelo">
+                <Setter Property="BackgroundColor" Value="#FFD83E" />
+                <Setter Property="CornerRadius" Value="100" />
+                <Setter Property="TextColor" Value="#2A4B9B" />
             </Style>
             <Style TargetType="Button" x:Key="BotaoVazado">
                 <Setter Property="BackgroundColor" Value="Transparent" />

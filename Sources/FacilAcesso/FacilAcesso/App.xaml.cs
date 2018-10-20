@@ -11,7 +11,7 @@ namespace FacilAcesso
         {
             InitializeComponent();
 
-            var navigationPage = new NavigationPage(new CartaoCreditoPage());
+            var navigationPage = new NavigationPage(new CompartilharVisitantePage());
             navigationPage.BarTextColor = Color.White;
             navigationPage.BarBackgroundColor = Color.FromHex("#1D346B");
             MainPage = navigationPage;

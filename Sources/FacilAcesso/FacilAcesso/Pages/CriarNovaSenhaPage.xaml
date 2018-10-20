@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:VContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.CriarNovaSenhaPage"
+             NavigationPage.HasNavigationBar="False"
+             ControlTemplate="{StaticResource PaginaVazada}"
+             Title="Criar nova senha">
+    <ScrollView>
+        <StackLayout Margin="40" Spacing="15">
+            <Label Style="{StaticResource TextoTitulo}" Text="Criar nova senha" Margin="0,30,0,0"></Label>
+            <Label Style="{StaticResource TextoNormal}" Text="Insira uma senha com o mínimo de 6 caracteres, sendo letras e números."></Label>
+            <Frame Style="{StaticResource FrameComponentes}" Margin="0,20,0,0">
+                <StackLayout Style="{StaticResource LayoutComponentes}">
+                    <StackLayout Style="{StaticResource EntryContainer}">
+                        <Image Source="ic_tag.png" Style="{StaticResource EntryImage}"></Image>
+                        <local:VEntry Placeholder="Nova senha" Style="{StaticResource Entry}"></local:VEntry>
+                    </StackLayout>
+                    <StackLayout Style="{StaticResource Separator}"></StackLayout>
+                    <StackLayout Style="{StaticResource EntryContainer}">
+                        <Image Source="ic_tag.png" Style="{StaticResource EntryImage}"></Image>
+                        <local:VEntry Placeholder="Confirmar nova senha" Style="{StaticResource Entry}"></local:VEntry>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Button Style="{StaticResource BotaoAzul}" Text="CRIAR NOVA SENHA" Margin="0,20,0,0"></Button>
+        </StackLayout>
+    </ScrollView>
+</local:VContentPage>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:VContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.CompartilharVisitantePage"
+             NavigationPage.HasNavigationBar="False"
+             ControlTemplate="{StaticResource PaginaNormal}"
+             Title="Convidar visitantes">
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+            <StackLayout Spacing="10" Margin="15">
+                <Label Text="Indique as informações do visitante que terá acesso ao condomínio abaixo:" TextColor="#2A4B9B" FontAttributes="Bold" FontSize="12"></Label>
+                <Frame Style="{StaticResource FrameComponentes}" Padding="15">
+                    <StackLayout Spacing="12">
+                        <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+                            <Image Source="ic_tag.png" HeightRequest="16" WidthRequest="16" VerticalOptions="Center"></Image>
+                            <StackLayout Spacing="0">
+                                <Label Text="Dados do Visitante" FontSize="12" TextColor="Black" FontAttributes="Bold"></Label>
+                                <Label Text="Luciana Martins" FontSize="12" TextColor="#262626"></Label>
+                                <Label Text="CPF: 098.987.987-85" FontSize="12" TextColor="#262626"></Label>
+                                <Label Text="E-mail: lucianatins@gmail.com" FontSize="12" TextColor="#262626"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+                            <Image Source="ic_parking.png" HeightRequest="12" WidthRequest="12" VerticalOptions="Center"></Image>
+                            <StackLayout Spacing="0">
+                                <Label Text="Local" FontSize="12" TextColor="Black" FontAttributes="Bold"></Label>
+                                <Label Text="Salvador Shopping Business" FontSize="12" TextColor="#262626"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+                            <Image Source="ic_date.png" HeightRequest="16" WidthRequest="16" VerticalOptions="Center"></Image>
+                            <StackLayout Spacing="0">
+                                <Label Text="Data" FontSize="12" TextColor="Black" FontAttributes="Bold"></Label>
+                                <Label Text="01/09/2018 até 01/09/2019" FontSize="12" TextColor="#262626"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+                            <Image Source="ic_time.png" HeightRequest="16" WidthRequest="16" VerticalOptions="Center"></Image>
+                            <StackLayout Spacing="0">
+                                <Label Text="Hora" FontSize="12" TextColor="Black" FontAttributes="Bold"></Label>
+                                <Label Text="13:00hs às 16:00hs" FontSize="12" TextColor="#262626"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+                            <Image Source="ic_invite_type.png" HeightRequest="16" WidthRequest="16" VerticalOptions="Center"></Image>
+                            <StackLayout Spacing="0">
+                                <Label Text="Tipo do Convite" FontSize="12" TextColor="Black" FontAttributes="Bold"></Label>
+                                <Label Text="Desconto de 100%" FontSize="12" TextColor="#262626"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Button Style="{StaticResource BotaoVazado}" Text="COMPARTILHAR COM O VISITANTE"></Button>
+            </StackLayout>
+        </ScrollView>
+        <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Spacing="0">
+            <StackLayout BackgroundColor="#7F000000" VerticalOptions="FillAndExpand"></StackLayout>
+            <Frame Style="{StaticResource FrameComponentes}" CornerRadius="0" Padding="20">
+                <StackLayout Spacing="10">
+                    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="80"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="80"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="10"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <StackLayout Spacing="5" WidthRequest="80" Grid.Column="0" Grid.Row="0">
+                            <Image Source="gmail.png" HeightRequest="30"></Image>
+                            <Label Text="Gmail" TextColor="#2A4B9B" FontSize="13" HorizontalTextAlignment="Center"></Label>
+                        </StackLayout>
+                        <StackLayout Spacing="5" WidthRequest="80" Grid.Column="2" Grid.Row="0">
+                            <Image Source="gmail.png" HeightRequest="30"></Image>
+                            <Label Text="Message" TextColor="#2A4B9B" FontSize="13" HorizontalTextAlignment="Center"></Label>
+                        </StackLayout>
+                        <StackLayout Spacing="5" WidthRequest="80" Grid.Column="4" Grid.Row="0">
+                            <Image Source="gmail.png" HeightRequest="30"></Image>
+                            <Label Text="WhatsApp" TextColor="#2A4B9B" FontSize="13" HorizontalTextAlignment="Center"></Label>
+                        </StackLayout>
+                        <StackLayout Spacing="5" WidthRequest="80" Grid.Column="0" Grid.Row="2">
+                            <Image Source="gmail.png" HeightRequest="30"></Image>
+                            <Label Text="Mail" TextColor="#2A4B9B" FontSize="13" HorizontalTextAlignment="Center"></Label>
+                        </StackLayout>
+                        <StackLayout Spacing="5" WidthRequest="80" Grid.Column="2" Grid.Row="2">
+                            <Image Source="gmail.png" HeightRequest="30"></Image>
+                            <Label Text="Message" TextColor="#2A4B9B" FontSize="13" HorizontalTextAlignment="Center"></Label>
+                        </StackLayout>
+                        <StackLayout Spacing="5" WidthRequest="80" Grid.Column="4" Grid.Row="2">
+                            <Image Source="gmail.png" HeightRequest="30"></Image>
+                            <Label Text="More" TextColor="#2A4B9B" FontSize="13" HorizontalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </AbsoluteLayout>
+</local:VContentPage>

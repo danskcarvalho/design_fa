@@ -21,7 +21,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,7">
-                            <Image Source="ic_parking.png" HeightRequest="12" WidthRequest="12"></Image>
+                            <Image Source="ic_parking.png" HeightRequest="12" WidthRequest="12" VerticalOptions="Center"></Image>
                             <StackLayout Spacing="0">
                                 <Label Text="Salvador Shopping" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
                                 <Label Text="13/08/2018, 12:55hs - 13:32hs" FontSize="12" TextColor="Black"></Label>
