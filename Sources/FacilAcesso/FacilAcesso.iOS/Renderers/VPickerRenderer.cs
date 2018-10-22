@@ -30,6 +30,12 @@ namespace FacilAcesso.iOS
                 //Control.BackgroundColor = Color.FromHex("#90FFFFFF").ToUIColor();
                 //Control.Font = Control.Font.WithSize(14);
                 //ResizeHeight();
+
+                if (Element.SelectedIndex == -1)
+                {
+                    Control.Text = view.Placeholder;
+                    Control.TextColor = view.PlaceholderColor.ToUIColor();
+                }
             }
         }
 
@@ -42,6 +48,23 @@ namespace FacilAcesso.iOS
             if (view == null)
                 return;
             ResizeHeight();
+
+            if (e.PropertyName == "SelectedIndex")
+            {
+
+                if (Control != null)
+                {
+                    if (Element.SelectedIndex == -1)
+                    {
+                        Control.Text = view.Placeholder;
+                        Control.TextColor = view.PlaceholderColor.ToUIColor();
+                    }
+                    else
+                    {
+                        Control.TextColor = view.TextColor.ToUIColor();
+                    }
+                }
+            }
         }
         
         /// <summary>

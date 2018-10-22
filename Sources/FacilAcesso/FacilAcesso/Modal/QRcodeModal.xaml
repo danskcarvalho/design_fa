@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:VContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.QRcodeModal">
+    <StackLayout Margin="20">
+        <Label Text="QRcode" Style="{StaticResource TextoTitulo}" Margin="0,0,0,10" HorizontalTextAlignment="Center"></Label>
+        <Image Source="qrcode.jpg" HorizontalOptions="FillAndExpand" WidthRequest="150" Margin="30,0,30,30"></Image>
+    </StackLayout>
+</local:VContentView>

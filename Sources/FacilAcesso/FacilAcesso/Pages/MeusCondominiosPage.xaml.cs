@@ -15,6 +15,13 @@ namespace FacilAcesso
 		public MeusCondominiosPage ()
 		{
 			InitializeComponent ();
+            picker.ItemsSource = new List<string> { "Salvador Shopping Business" };
+            picker.SelectedIndexChanged += Picker_SelectedIndexChanged;
 		}
-	}
+
+        private void Picker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            picker.FontAttributes = FontAttributes.Bold;
+        }
+    }
 }

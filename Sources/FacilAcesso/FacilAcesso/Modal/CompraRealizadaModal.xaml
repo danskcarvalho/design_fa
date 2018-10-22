@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:VContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.CompraRealizadaModal">
+    <StackLayout Margin="20">
+        <Label Text="Compra realizada!" Style="{StaticResource TextoTitulo}" Margin="0,0,0,10" HorizontalTextAlignment="Center"></Label>
+        <Label Text="O valor de R$50,00 foi acrescentado nos seus créditos com sucesso." Style="{StaticResource TextoNormal}"></Label>
+        <Button Style="{StaticResource BotaoVazado}" Text="FECHAR" Margin="0,20,0,0" Clicked="Button_Clicked"></Button>
+    </StackLayout>
+</local:VContentView>

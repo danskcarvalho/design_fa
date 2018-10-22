@@ -36,6 +36,29 @@
                 <Setter Property="FontSize" Value="12" />
                 <Setter Property="Margin" Value="8,5,8,5" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+                <Setter Property="PlaceholderColor" Value="LightGray"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+            </Style>
+            <Style TargetType="local:VDatePicker" x:Key="DatePicker">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="Margin" Value="8,5,8,5" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+                <Setter Property="PlaceholderTextColor" Value="LightGray"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+            </Style>
+            <Style TargetType="local:VTimePicker" x:Key="TimePicker">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="Margin" Value="8,5,8,5" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+                <Setter Property="PlaceholderTextColor" Value="LightGray"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+            </Style>
+            <Style TargetType="local:VPicker" x:Key="Picker">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="Margin" Value="8,5,8,5" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+                <Setter Property="PlaceholderColor" Value="LightGray"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
             </Style>
             <Style TargetType="Label" x:Key="TextoNormal">
                 <Setter Property="TextColor" Value="#787876" />
@@ -43,6 +66,12 @@
             </Style>
             <Style TargetType="Label" x:Key="TextoTitulo">
                 <Setter Property="TextColor" Value="#2A4B9B" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+            <Style TargetType="Label" x:Key="TextoErro">
+                <Setter Property="TextColor" Value="#E34949" />
                 <Setter Property="FontSize" Value="18" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="HorizontalTextAlignment" Value="Center" />

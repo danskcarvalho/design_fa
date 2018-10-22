@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:VContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.HistoricoComprasModal">
+    <StackLayout Margin="20">
+        <Label Text="Histórico de compras" Style="{StaticResource TextoTitulo}" Margin="0,0,0,10" HorizontalTextAlignment="Center"></Label>
+        <local:ItemRepeater Spacing="12" x:Name="itemRepeater" Margin="0,0,80,0">
+            <local:ItemRepeater.DefaultTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+                        <Image Source="ic_credits.png" HeightRequest="16" WidthRequest="16" VerticalOptions="Center"></Image>
+                        <StackLayout Spacing="0">
+                            <Label Text="R$ 50,00" FontSize="12" TextColor="Black" FontAttributes="Bold"></Label>
+                            <Label Text="13/08/2018, 12:55 hs" FontSize="12" TextColor="#262626"></Label>
+                        </StackLayout>
+                    </StackLayout>
+                </DataTemplate>
+            </local:ItemRepeater.DefaultTemplate>
+        </local:ItemRepeater>
+    </StackLayout>
+</local:VContentView>

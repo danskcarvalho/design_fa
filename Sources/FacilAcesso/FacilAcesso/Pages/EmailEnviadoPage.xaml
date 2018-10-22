@@ -14,7 +14,7 @@
                 <StackLayout Style="{StaticResource LayoutComponentes}">
                     <StackLayout Style="{StaticResource EntryContainer}">
                         <Image Source="ic_tag.png" Style="{StaticResource EntryImage}"></Image>
-                        <local:VEntry Placeholder="Código" Style="{StaticResource Entry}"></local:VEntry>
+                        <local:VEntry Placeholder="Código" Style="{StaticResource Entry}" Margin="8,2,8,2"></local:VEntry>
                     </StackLayout>
                 </StackLayout>
             </Frame>

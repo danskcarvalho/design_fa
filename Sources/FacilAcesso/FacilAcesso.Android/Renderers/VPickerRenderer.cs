@@ -37,9 +37,36 @@ namespace FacilAcesso.Droid
                 //Control.TextSize = 14;
                 Control.InputType = Android.Text.InputTypes.TextFlagNoSuggestions;
                 Control.Background = new ColorDrawable(Android.Graphics.Color.Transparent);
+                if(Element.SelectedIndex == -1)
+                {
+                    Control.Text = view.Placeholder;
+                    Control.SetTextColor(view.PlaceholderColor.ToAndroid());
+                }
 
                 //var thickness = (view as VPicker)?.Padding ?? new Thickness(30, 35, 30, 35);
                 //Control.SetPadding((int)thickness.Left, (int)thickness.Top, (int)thickness.Right, (int)thickness.Bottom);
+            }
+        }
+
+        protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            base.OnElementPropertyChanged(sender, e);
+            if(e.PropertyName == "SelectedIndex")
+            {
+                var view = Element as VPicker;
+
+                if (Control != null)
+                {
+                    if (Element.SelectedIndex == -1)
+                    {
+                        Control.Text = view.Placeholder;
+                        Control.SetTextColor(view.PlaceholderColor.ToAndroid());
+                    }
+                    else
+                    {
+                        Control.SetTextColor(view.TextColor.ToAndroid());
+                    }
+                }
             }
         }
     }

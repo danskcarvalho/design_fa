@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace FacilAcesso
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class CriarContaPage : VContentPage
+	public partial class CadastrarNovoCartao3Modal : VContentView
 	{
-		public CriarContaPage ()
+		public CadastrarNovoCartao3Modal ()
 		{
 			InitializeComponent ();
 		}
-
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            DisplayModal(new CadastrarNovoCartao3Modal());
-        }
-    }
+	}
 }

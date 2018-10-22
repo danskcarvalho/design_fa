@@ -14,15 +14,15 @@
                 <StackLayout Style="{StaticResource LayoutComponentes}">
                     <local:VEntry Placeholder="Nome completo" Style="{StaticResource Entry}"></local:VEntry>
                     <StackLayout Style="{StaticResource Separator}"></StackLayout>
-                    <local:VEntry Placeholder="Data de Nascimento" Style="{StaticResource Entry}"></local:VEntry>
+                    <local:VDatePicker Placeholder="Data de Nascimento" Style="{StaticResource DatePicker}"></local:VDatePicker>
                     <StackLayout Style="{StaticResource Separator}"></StackLayout>
-                    <local:VEntry Placeholder="Sexo" Style="{StaticResource Entry}"></local:VEntry>
+                    <local:VPicker Placeholder="Sexo" Style="{StaticResource Picker}"></local:VPicker>
                     <StackLayout Style="{StaticResource Separator}"></StackLayout>
                     <local:VEntry Placeholder="CPF" Style="{StaticResource Entry}"></local:VEntry>
                     <StackLayout Style="{StaticResource Separator}"></StackLayout>
-                    <local:VEntry Placeholder="Senha" Style="{StaticResource Entry}"></local:VEntry>
+                    <local:VEntry Placeholder="Senha" Style="{StaticResource Entry}" IsPassword="True"></local:VEntry>
                     <StackLayout Style="{StaticResource Separator}"></StackLayout>
-                    <local:VEntry Placeholder="Confirmação de Senha" Style="{StaticResource Entry}"></local:VEntry>
+                    <local:VEntry Placeholder="Confirmação de Senha" Style="{StaticResource Entry}" IsPassword="True"></local:VEntry>
                 </StackLayout>
             </Frame>
             <Button Style="{StaticResource BotaoAzul}" Text="ENVIAR" Margin="0,20,0,0" Clicked="Button_Clicked"></Button>

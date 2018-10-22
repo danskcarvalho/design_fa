@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:VContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.CadastrarNovoCartao3Modal">
+    <StackLayout Margin="20">
+        <Label Text="Cadastrar novo cartão" Style="{StaticResource TextoTitulo}" Margin="0,0,0,10" HorizontalTextAlignment="Center"></Label>
+        <Label Text="É necessário cadastrar um cartão de crédito para seguir." Style="{StaticResource TextoNormal}"></Label>
+        <Frame Style="{StaticResource FrameComponentes}" Margin="0,20,0,0">
+            <StackLayout Style="{StaticResource LayoutComponentes}">
+                <local:VEntry Placeholder="Bandeira do cartão" Style="{StaticResource Entry}"></local:VEntry>
+                <StackLayout Style="{StaticResource Separator}"></StackLayout>
+                <local:VEntry Placeholder="Nome do cartão de crédito" Style="{StaticResource Entry}"></local:VEntry>
+                <StackLayout Style="{StaticResource Separator}"></StackLayout>
+                <local:VEntry Placeholder="Número do cartão de crédito" Style="{StaticResource Entry}"></local:VEntry>
+                <StackLayout Style="{StaticResource Separator}"></StackLayout>
+                <local:VEntry Placeholder="Validade" Style="{StaticResource Entry}"></local:VEntry>
+                <StackLayout Style="{StaticResource Separator}"></StackLayout>
+                <local:VEntry Placeholder="CVV" Style="{StaticResource Entry}"></local:VEntry>
+            </StackLayout>
+        </Frame>
+        <Button Style="{StaticResource BotaoAzul}" Text="CADASTRAR NOVO CARTÃO" Margin="0,20,0,0"></Button>
+    </StackLayout>
+</local:VContentView>

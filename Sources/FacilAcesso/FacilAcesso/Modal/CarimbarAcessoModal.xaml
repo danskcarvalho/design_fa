@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:VContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.CarimbarAcessoModal">
+    <StackLayout Margin="20">
+        <Label Text="Carimbar acesso" Style="{StaticResource TextoTitulo}" Margin="0,0,0,10" HorizontalTextAlignment="Center"></Label>
+        <Label Text="Deseja realizar o pagamento deste ticket?" Style="{StaticResource TextoNormal}"></Label>
+        <StackLayout Style="{StaticResource Separator}"></StackLayout>
+        <Label Text="Será debitada no cartão cadastrado:" Style="{StaticResource TextoNormal}" FontAttributes="Bold" TextColor="Black"></Label>
+        <Label Text="Mastercard &#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; 5678" Style="{StaticResource TextoNormal}"></Label>
+        <Button Style="{StaticResource BotaoAzul}" Text="CARIMBAR ACESSO" Margin="0,20,0,0"></Button>
+    </StackLayout>
+</local:VContentView>

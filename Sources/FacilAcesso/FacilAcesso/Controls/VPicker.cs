@@ -9,13 +9,18 @@ namespace FacilAcesso
 {
     public class VPicker : Picker
     {
-        public static readonly BindableProperty PaddingProperty =
-            BindableProperty.Create("Padding", typeof(Thickness), typeof(VPicker), new Thickness(30, 35, 30, 35));
+        public static readonly BindableProperty PlaceholderProperty = BindableProperty.Create("Placeholder", typeof(string), typeof(VPicker), string.Empty);
+        public static readonly BindableProperty PlaceholderColorProperty = BindableProperty.Create("PlaceholderColor", typeof(Color), typeof(VPicker), Color.LightGray);
 
-        public Thickness Padding
+        public string Placeholder
         {
-            get => (Thickness)GetValue(PaddingProperty);
-            set => SetValue(PaddingProperty, value);
+            get => (string)GetValue(PlaceholderProperty);
+            set => SetValue(PlaceholderProperty, value);
+        }
+        public Color PlaceholderColor
+        {
+            get => (Color)GetValue(PlaceholderColorProperty);
+            set => SetValue(PlaceholderColorProperty, value);
         }
     }
 }

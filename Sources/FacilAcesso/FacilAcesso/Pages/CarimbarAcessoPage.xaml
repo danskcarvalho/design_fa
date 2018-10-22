@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:VContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FacilAcesso"
+             x:Class="FacilAcesso.CarimbarAcessoPage"
+             NavigationPage.HasNavigationBar="False"
+             ControlTemplate="{StaticResource PaginaNormal}"
+             Title="Carimbar acesso">
+    <ScrollView Padding="0" Margin="0">
+        <StackLayout Spacing="0">
+            <StackLayout Spacing="12" Margin="0,20,0,0">
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+                    <Image Source="ic_invite_type.png" HeightRequest="18" WidthRequest="18"></Image>
+                    <StackLayout Spacing="0">
+                        <Label Text="Ticket" FontSize="12" TextColor="Black" FontAttributes="Bold"></Label>
+                        <Label Text="567867678" FontSize="12" TextColor="#262626"></Label>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+                    <Image Source="ic_parking.png" HeightRequest="12" WidthRequest="12"></Image>
+                    <StackLayout Spacing="0">
+                        <Label Text="Local" FontSize="12" TextColor="Black" FontAttributes="Bold"></Label>
+                        <Label Text="Salvador Shopping" FontSize="12" TextColor="#262626"></Label>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
+                    <Image Source="ic_entrance.png" HeightRequest="16" WidthRequest="16"></Image>
+                    <StackLayout Spacing="0">
+                        <Label Text="Entrada" FontSize="12" TextColor="Black" FontAttributes="Bold"></Label>
+                        <Label Text="13/08/2016 às 12:55 hs" FontSize="12" TextColor="#262626"></Label>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Style="{StaticResource Separator}" Margin="0,8,0,8"></StackLayout>
+                <StackLayout Spacing="12" Margin="15,0,15,0" IsVisible="False">
+                    <Label Text="Ticket pago com sucesso!" Style="{StaticResource TextoNormal}" FontAttributes="Bold" TextColor="#2A4B9B"></Label>
+                    <Label Text="Este ticket foi pago com o cartão de crédito cadastrado." Style="{StaticResource TextoNormal}"></Label>
+                </StackLayout>
+                <StackLayout Spacing="12" Margin="15,0,15,0">
+                    <Label Text="Nesta área poderá ser dado descontos e até realizar o pagamento do ticket." Style="{StaticResource TextoNormal}" FontAttributes="Bold" TextColor="#2A4B9B"></Label>
+                    <Frame Style="{StaticResource FrameComponentes}">
+                        <StackLayout Style="{StaticResource LayoutComponentes}">
+                            <local:VPicker Placeholder="Tranferência" Style="{StaticResource Picker}" x:Name="picker" Margin="8,2,8,2"></local:VPicker>
+                        </StackLayout>
+                    </Frame>
+                    <Button Style="{StaticResource BotaoAzul}" Text="CONFIRMAR"></Button>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</local:VContentPage>

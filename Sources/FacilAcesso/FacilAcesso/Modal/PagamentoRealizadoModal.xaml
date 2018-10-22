@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:VContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:local="clr-namespace:FacilAcesso"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FacilAcesso.PagamentoRealizadoModal">
+    <StackLayout Margin="20">
+        <Label Text="Pagamento realizado!" Style="{StaticResource TextoTitulo}" Margin="0,0,0,10" HorizontalTextAlignment="Center"></Label>
+        <Label Text="Seu ticket foi pago com o cartão de crédito cadastrado." Style="{StaticResource TextoNormal}"></Label>
+        <StackLayout Style="{StaticResource Separator}"></StackLayout>
+        <Label Style="{StaticResource TextoNormal}" HorizontalTextAlignment="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="saldo: "></Span>
+                    <Span Text="R$ 50,00" FontAttributes="Bold" TextColor="#2A4B9B"></Span>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Button Style="{StaticResource BotaoVazado}" Text="FECHAR" Margin="0,20,0,0"></Button>
+    </StackLayout>
+</local:VContentView>
