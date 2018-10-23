@@ -19,5 +19,10 @@ namespace FacilAcesso
             new object(), new object(), new object(), new object() };
 
         }
-	}
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MeusCreditosPage());
+        }
+    }
 }

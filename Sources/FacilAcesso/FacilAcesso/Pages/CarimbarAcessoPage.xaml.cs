@@ -18,5 +18,17 @@ namespace FacilAcesso
             picker.ItemsSource = new List<string> { "Transferir pagamento para mim", "Transferir pagamento para outrem" };
 
         }
-	}
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await DisplayModal(new CarimbarAcessoModal());
+        }
+
+        public void Carimbado()
+        {
+            this.stckCarimbar.IsVisible = false;
+            this.stckSucesso.IsVisible = true;
+            this.HideModal();
+        }
+    }
 }

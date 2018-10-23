@@ -16,5 +16,10 @@ namespace FacilAcesso
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await this.ParentPage.DisplayModal(new FalhaPagamentoModal());
+        }
+    }
 }

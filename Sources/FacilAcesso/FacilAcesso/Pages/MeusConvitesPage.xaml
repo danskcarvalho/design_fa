@@ -11,6 +11,9 @@
             <local:ItemRepeater.DefaultTemplate>
                 <DataTemplate>
                     <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,7">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"></TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
                         <Image Source="ic_invite.png" HeightRequest="18" WidthRequest="18" VerticalOptions="Center"></Image>
                         <StackLayout Spacing="0">
                             <Label Text="Mariana Martins" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
@@ -18,7 +21,11 @@
                             <Label Text="20/09/2018, 09:00hs - 12:00hs" FontSize="12" TextColor="Black"></Label>
                             <StackLayout Orientation="Horizontal">
                                 <Label FontSize="11" Text="Convite enviado" TextColor="Black" FontAttributes="Bold"></Label>
-                                <Label FontSize="11" Text="Cancelar convite" TextColor="#31509E"></Label>
+                                <Label FontSize="11" Text="Cancelar convite" TextColor="#31509E">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                                    </Label.GestureRecognizers>
+                                </Label>
                             </StackLayout>
                         </StackLayout>
                     </StackLayout>

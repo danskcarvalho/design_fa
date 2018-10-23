@@ -31,18 +31,18 @@
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Style="{StaticResource Separator}" Margin="0,8,0,8"></StackLayout>
-                <StackLayout Spacing="12" Margin="15,0,15,0" IsVisible="False">
+                <StackLayout Spacing="12" Margin="15,0,15,0" IsVisible="False" x:Name="stckSucesso">
                     <Label Text="Ticket pago com sucesso!" Style="{StaticResource TextoNormal}" FontAttributes="Bold" TextColor="#2A4B9B"></Label>
                     <Label Text="Este ticket foi pago com o cartão de crédito cadastrado." Style="{StaticResource TextoNormal}"></Label>
                 </StackLayout>
-                <StackLayout Spacing="12" Margin="15,0,15,0">
+                <StackLayout Spacing="12" Margin="15,0,15,0" x:Name="stckCarimbar">
                     <Label Text="Nesta área poderá ser dado descontos e até realizar o pagamento do ticket." Style="{StaticResource TextoNormal}" FontAttributes="Bold" TextColor="#2A4B9B"></Label>
                     <Frame Style="{StaticResource FrameComponentes}">
                         <StackLayout Style="{StaticResource LayoutComponentes}">
                             <local:VPicker Placeholder="Tranferência" Style="{StaticResource Picker}" x:Name="picker" Margin="8,2,8,2"></local:VPicker>
                         </StackLayout>
                     </Frame>
-                    <Button Style="{StaticResource BotaoAzul}" Text="CONFIRMAR"></Button>
+                    <Button Style="{StaticResource BotaoAzul}" Text="CONFIRMAR" Clicked="Button_Clicked"></Button>
                 </StackLayout>
             </StackLayout>
         </StackLayout>

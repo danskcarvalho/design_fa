@@ -16,5 +16,11 @@ namespace FacilAcesso
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            ((CartaoCreditoPage)this.ParentPage).CartaoInserido();
+            this.ParentPage.HideModal();
+        }
+    }
 }

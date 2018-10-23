@@ -23,5 +23,25 @@ namespace FacilAcesso
         {
             picker.FontAttributes = FontAttributes.Bold;
         }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DetalhesLocalidadePage());
+        }
+
+        private async void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
+        {
+            await DisplayAlert("Fácil Acesso", "Rotas", "Ok");
+        }
+
+        private async void TapGestureRecognizer_Tapped_2(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ConvidarVisitantesPage());
+        }
+
+        private async void TapGestureRecognizer_Tapped_3(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new HistoricoUsoPage());
+        }
     }
 }

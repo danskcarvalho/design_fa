@@ -15,9 +15,12 @@
                     <Label TextColor="#2A4B9B" Text="TICKET FÁCIL ACESSO" FontSize="13" VerticalOptions="Center"></Label>
                 </StackLayout>
                     <Frame CornerRadius="0" HorizontalOptions="Center" Margin="0,20,0,0" Padding="7">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
                         <Image Source="qrcode.jpg" HorizontalOptions="FillAndExpand" WidthRequest="150"></Image>
                     </Frame>
-                    <StackLayout Spacing="12" Margin="0,20,0,0" IsVisible="False">
+                    <StackLayout Spacing="12" Margin="0,20,0,0" x:Name="stckDados" IsVisible="False">
                         <StackLayout Orientation="Horizontal" Spacing="20" Margin="15,0,0,0">
                             <Image Source="ic_parking.png" HeightRequest="12" WidthRequest="12"></Image>
                             <StackLayout Spacing="0">
@@ -47,7 +50,7 @@
                             </StackLayout>
                         </StackLayout>
                     </StackLayout>
-                    <StackLayout Margin="0,15,0,0" Spacing="0">
+                    <StackLayout Margin="0,15,0,0" Spacing="0" x:Name="stckHorario">
                         <Label Text="ESTE TICKET TEM VALIDADE DE 10 MINUTOS." Style="{StaticResource TextoPequeno}" TextColor="#777777" HorizontalTextAlignment="Center"></Label>
                         <Label Text="12:55" FontSize="55" TextColor="Black" HorizontalTextAlignment="Center" Margin="0,30,0,0"></Label>
                         <Label Text="13 DE AGOSTO DE 2019" Style="{StaticResource TextoPequeno}" TextColor="Black" HorizontalTextAlignment="Center" Margin="0"></Label>
@@ -56,7 +59,7 @@
             </ScrollView>
         </local:BottomPanelLayout.MainView>
         <local:BottomPanelLayout.BottomView>
-            <Frame Padding="7" CornerRadius="0" BorderColor="#F9F9F9">
+            <Frame Padding="7" CornerRadius="0" BorderColor="#F9F9F9" IsVisible="False" x:Name="stckBottom">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"></ColumnDefinition>

@@ -14,7 +14,7 @@
 
                 <Frame Padding="16,16,16,16" AbsoluteLayout.LayoutBounds="0.5,25,280,175" AbsoluteLayout.LayoutFlags="XProportional" Margin="0,0,0,0" WidthRequest="280" HeightRequest="175" BackgroundColor="#FAFAFA" CornerRadius="5">
                     <StackLayout VerticalOptions="FillAndExpand">
-                        <StackLayout Padding="0,22,0,0" VerticalOptions="FillAndExpand">
+                        <StackLayout Padding="0,22,0,0" VerticalOptions="FillAndExpand" IsVisible="False" x:Name="creditCardData">
                             <FlexLayout AlignItems="Center" HorizontalOptions="FillAndExpand" JustifyContent="SpaceBetween">
                                 <Label Text="&#8226;&#8226;&#8226;&#8226;" FontSize="25"></Label>
                                 <Label Text="&#8226;&#8226;&#8226;&#8226;" FontSize="25"></Label>
@@ -36,14 +36,14 @@
                                 <Image Source="ic_mastercard.png" HeightRequest="40"></Image>
                             </FlexLayout>
                         </StackLayout>
-                        <StackLayout VerticalOptions="FillAndExpand" IsVisible="False">
+                        <StackLayout VerticalOptions="FillAndExpand" x:Name="creditCardNoData">
                             <Label TextColor="#D1D1D1" Text="Não há cartão cadastrado" FontSize="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
                         </StackLayout>
                     </StackLayout>
                 </Frame>
             </AbsoluteLayout>
-            <Label Text="Cartão inserido!" Style="{StaticResource TextoTitulo}" Margin="15,20,15,0" HorizontalTextAlignment="Center"></Label>
-            <Label Text="Agora é só estacionar ;)" Style="{StaticResource TextoTitulo}" Margin="15,0,15,0" HorizontalTextAlignment="Center"></Label>
+            <Label x:Name="lbl1" Text="Cartão inserido!" Style="{StaticResource TextoTitulo}" Margin="15,20,15,0" HorizontalTextAlignment="Center"></Label>
+            <Label x:Name="lbl2" Text="Agora é só estacionar ;)" Style="{StaticResource TextoTitulo}" Margin="15,0,15,0" HorizontalTextAlignment="Center"></Label>
 
             <Button Style="{StaticResource BotaoVazado}" Text="Cadastrar novo cartão" Margin="15,20,15,0" Clicked="Button_Clicked"></Button>
         </StackLayout>

@@ -9,8 +9,8 @@
         <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="40" Spacing="15">
                 <Image Margin="0,100,0,0" Source="logo_home.png" Aspect="AspectFit" HorizontalOptions="FillAndExpand"></Image>
-                <Button Style="{StaticResource BotaoAzul}" Text="CRIAR CONTA" Margin="0,100,0,0"></Button>
-                <Button Style="{StaticResource BotaoVazado}" Text="LOGAR"></Button>
+                <Button Style="{StaticResource BotaoAzul}" Text="CRIAR CONTA" Margin="0,100,0,0" Clicked="Button_Clicked"></Button>
+                <Button Style="{StaticResource BotaoVazado}" Text="LOGAR" Clicked="Button_Clicked_1"></Button>
             </StackLayout>
         </ScrollView>
     </AbsoluteLayout>

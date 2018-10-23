@@ -12,38 +12,65 @@
         <ScrollView>
             <StackLayout Padding="15" Spacing="0">
                 <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
                     <Image Source="ic_parking.png" HeightRequest="18" WidthRequest="18"></Image>
                     <Label Text="Onde Estacionar" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
                     <Image Source="ic_car.png" HeightRequest="18" WidthRequest="18"></Image>
                     <Label Text="Meus condomínios" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
                     <Image Source="ic_history.png" HeightRequest="18" WidthRequest="18"></Image>
                     <Label Text="Histórico de uso" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
                     <Image Source="ic_invite.png" HeightRequest="18" WidthRequest="18"></Image>
                     <Label Text="Meus dados" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
                     <Image Source="ic_credit_card.png" HeightRequest="18" WidthRequest="18"></Image>
                     <Label Text="Cartão de crédito" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_5"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
                     <Image Source="ic_credits.png" HeightRequest="18" WidthRequest="18"></Image>
                     <Label Text="Meus créditos" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_6"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
                     <Image Source="ic_invite.png" HeightRequest="18" WidthRequest="18"></Image>
                     <Label Text="Meus convites" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_7"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
                     <Image Source="ic_check.png" HeightRequest="18" WidthRequest="18"></Image>
                     <Label Text="Carimbar acesso" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="25" Padding="0, 10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_8"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
                     <Image Source="ic_information.png" HeightRequest="18" WidthRequest="18"></Image>
                     <Label Text="Fale com a Fácil Acesso" FontAttributes="Bold" FontSize="12" TextColor="Black"></Label>
                 </StackLayout>

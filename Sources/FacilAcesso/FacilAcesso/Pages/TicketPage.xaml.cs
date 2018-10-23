@@ -16,5 +16,22 @@ namespace FacilAcesso
 		{
 			InitializeComponent ();
 		}
-	}
+
+        int taps = 0;
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            if(taps == 0)
+            {
+                stckHorario.IsVisible = false;
+                stckDados.IsVisible = true;
+                stckBottom.IsVisible = true;
+            }
+            else if(taps == 1)
+            {
+                stckBottom.IsVisible = false;
+                await DisplayModal(new PagamentoRealizadoModal());
+            }
+            taps++;
+        }
+    }
 }

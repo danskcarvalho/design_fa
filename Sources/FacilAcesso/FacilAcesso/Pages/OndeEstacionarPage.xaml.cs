@@ -19,5 +19,22 @@ namespace FacilAcesso
             new object(), new object(), new object(), new object(), new object() };
 
         }
-	}
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            if (tabNavigation.SelectedIndex == 1)
+                await Navigation.PushAsync(new TicketPage());
+            else
+                await DisplayModal(new CadastrarNovoCartao2Modal());
+        }
+
+        private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if(listView.SelectedItem != null)
+            {
+                await Navigation.PushAsync(new DetalhesEstacionamentoPage());
+                listView.SelectedItem = null;
+            }
+        }
+    }
 }

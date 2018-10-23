@@ -21,5 +21,13 @@ namespace FacilAcesso
         {
             DisplayModal(new CadastrarNovoCartaoModal());
         }
+
+        public void CartaoInserido()
+        {
+            creditCardData.IsVisible = true;
+            creditCardNoData.IsVisible = false;
+            lbl1.IsVisible = true;
+            lbl2.IsVisible = true;
+        }
     }
 }

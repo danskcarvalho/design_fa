@@ -16,5 +16,15 @@ namespace FacilAcesso
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            stckOverlay.IsVisible = true;
+        }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            stckOverlay.IsVisible = false;
+        }
+    }
 }

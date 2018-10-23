@@ -28,8 +28,8 @@
                     <Label Text="Mastercard &#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; 5678" Style="{StaticResource TextoNormal}"></Label>
                 </StackLayout>
                 <StackLayout Spacing="5">
-                    <Button Style="{StaticResource BotaoAzul}" Text="COMPRAR"></Button>
-                    <Button Style="{StaticResource BotaoVazado}" Text="HISTÓRICO DE COMPRAS"></Button>
+                    <Button Style="{StaticResource BotaoAzul}" Text="COMPRAR" Clicked="Button_Clicked_1"></Button>
+                    <Button Style="{StaticResource BotaoVazado}" Text="HISTÓRICO DE COMPRAS" Clicked="Button_Clicked"></Button>
                 </StackLayout>
             </StackLayout>
         </StackLayout>

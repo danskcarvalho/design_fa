@@ -19,5 +19,15 @@ namespace FacilAcesso
             new object(), new object(), new object(), new object(), new object() };
 
         }
-	}
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await DisplayModal(new CancelarConviteModal());
+        }
+
+        private async void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DetalhesLocalidadePage());
+        }
+    }
 }

@@ -15,7 +15,7 @@
                     <Label Text="Agora é só estacionar ;)" Style="{StaticResource TextoTitulo}" HorizontalTextAlignment="Center"></Label>
                 </StackLayout>
             </Frame>
-            <Button Style="{StaticResource BotaoAzul}" Text="ACESSAR" Margin="20,30,20,0"></Button>
+            <Button Style="{StaticResource BotaoAzul}" Text="ACESSAR" Margin="20,30,20,0" Clicked="Button_Clicked"></Button>
         </StackLayout>
     </ScrollView>
 </local:VContentPage>

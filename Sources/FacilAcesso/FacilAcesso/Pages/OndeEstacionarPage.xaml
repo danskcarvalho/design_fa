@@ -7,13 +7,13 @@
              ControlTemplate="{StaticResource PaginaMenu}"
              Title="Onde Estacionar">
     <StackLayout Spacing="0">
-        <local:TabNavigation 
+        <local:TabNavigation x:Name="tabNavigation"
             SelectedIndex="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout local:TabNavigation.Title="MAPA">
                 <Image Source="google_maps.jpg" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Image>
             </StackLayout>
             <StackLayout local:TabNavigation.Title="LISTA">
-                <ListView SeparatorVisibility="None" x:Name="listView" local:EventBehavior.Unselectable="True" HasUnevenRows="True">
+                <ListView SeparatorVisibility="None" x:Name="listView" local:EventBehavior.Unselectable="True" HasUnevenRows="True" ItemSelected="listView_ItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -28,6 +28,9 @@
             </StackLayout>
         </local:TabNavigation>
         <Frame Style="{StaticResource FrameComponentes}" CornerRadius="0" Padding="15">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+            </Frame.GestureRecognizers>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
                 <Image Source="ic_ticket_facil_acesso.png" HeightRequest="20"></Image>
                 <Label Text="ESTACIONAR" TextColor="#2A4B9B" FontSize="13"></Label>

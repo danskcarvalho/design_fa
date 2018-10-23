@@ -16,5 +16,15 @@ namespace FacilAcesso
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await DisplayModal(new HistoricoComprasModal());
+        }
+
+        private async void Button_Clicked_1(object sender, EventArgs e)
+        {
+            await DisplayModal(new CompraRealizadaModal());
+        }
+    }
 }

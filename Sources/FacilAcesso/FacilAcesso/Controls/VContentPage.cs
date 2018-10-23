@@ -107,6 +107,9 @@ namespace FacilAcesso
 
         public Task DisplayModal(VContentView content)
         {
+            if (this.PopupContent != null && this.PopupContent is VContentView)
+                ((VContentView)this.PopupContent).ParentPage = null;
+
             content.ParentPage = this;
             this.PopupContent = content;
             this.IsPopupVisible = true;

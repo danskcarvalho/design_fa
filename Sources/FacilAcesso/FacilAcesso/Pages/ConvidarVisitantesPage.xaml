@@ -36,7 +36,7 @@
                     <local:VEntry Placeholder="Tipo de convite" Style="{StaticResource Entry}"></local:VEntry>
                 </StackLayout>
             </Frame>
-            <Button Style="{StaticResource BotaoAmarelo}" Text="CADASTRAR CONVITE" Margin="0,20,0,0"></Button>
+            <Button Style="{StaticResource BotaoAmarelo}" Text="CADASTRAR CONVITE" Margin="0,20,0,0" Clicked="Button_Clicked"></Button>
         </StackLayout>
     </ScrollView>
 </local:VContentPage>

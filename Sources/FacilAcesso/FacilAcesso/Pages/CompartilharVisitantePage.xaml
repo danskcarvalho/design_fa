@@ -51,11 +51,15 @@
                         </StackLayout>
                     </StackLayout>
                 </Frame>
-                <Button Style="{StaticResource BotaoVazado}" Text="COMPARTILHAR COM O VISITANTE"></Button>
+                <Button Style="{StaticResource BotaoVazado}" Text="COMPARTILHAR COM O VISITANTE" Clicked="Button_Clicked"></Button>
             </StackLayout>
         </ScrollView>
-        <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Spacing="0">
-            <StackLayout BackgroundColor="#7F000000" VerticalOptions="FillAndExpand"></StackLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Spacing="0" IsVisible="False" x:Name="stckOverlay">
+            <StackLayout BackgroundColor="#7F000000" VerticalOptions="FillAndExpand">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
             <Frame Style="{StaticResource FrameComponentes}" CornerRadius="0" Padding="20">
                 <StackLayout Spacing="10">
                     <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">

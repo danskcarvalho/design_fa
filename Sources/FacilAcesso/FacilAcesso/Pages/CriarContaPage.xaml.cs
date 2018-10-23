@@ -17,9 +17,9 @@ namespace FacilAcesso
 			InitializeComponent ();
 		}
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            DisplayModal(new CadastrarNovoCartao3Modal());
+            await DisplayModal(new CadastradoEfetuadoModal());
         }
     }
 }

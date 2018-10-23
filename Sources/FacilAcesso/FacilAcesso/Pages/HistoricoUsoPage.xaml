@@ -40,6 +40,9 @@
             </ListView.ItemTemplate>
         </ListView>
         <Frame Style="{StaticResource FrameComponentes}" CornerRadius="0" Padding="15">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+            </Frame.GestureRecognizers>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
                 <Image Source="ic_ticket_facil_acesso.png" HeightRequest="20"></Image>
                 <Label Text="Comprar créditos" TextColor="#2A4B9B" FontSize="13"></Label>

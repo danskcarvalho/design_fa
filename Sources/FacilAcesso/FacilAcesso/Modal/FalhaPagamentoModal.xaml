@@ -6,6 +6,6 @@
     <StackLayout Margin="20">
         <Label Text="Falha no pagamento" Style="{StaticResource TextoErro}" Margin="0,0,0,10" HorizontalTextAlignment="Center"></Label>
         <Label Text="O pagamento não foi autorizado no cartão cadastrado. É necessário o cadastro de um novo cartão de crédito." Style="{StaticResource TextoNormal}"></Label>
-        <Button Style="{StaticResource BotaoVazado}" Text="CADASTRAR NOVO CARTÃO" Margin="0,20,0,0"></Button>
+        <Button Style="{StaticResource BotaoVazado}" Text="CADASTRAR NOVO CARTÃO" Margin="0,20,0,0" Clicked="Button_Clicked"></Button>
     </StackLayout>
 </local:VContentView>
